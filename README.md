@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 ```
 
 * **scanf**: 提取用户输入的值，并将其储存到变量里面。  
-Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样。在scanf中，float是%f，而double是%lf
+Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样. 在scanf中，float是%f，而double是%lf.
 
 ```C
 int main(int argc, char *argv[])
