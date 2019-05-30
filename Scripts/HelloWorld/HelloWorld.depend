@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1559185581 source:/home/huiying/Program_Github/the-study-of-C/Scripts/HelloWorld/main.c
+	<stdio.h>
+	<stdlib.h>
+
