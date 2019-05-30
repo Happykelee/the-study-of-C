@@ -12,11 +12,11 @@
 
 ## [变量](#目录)
 
-* 变量类型
+### 变量类型
 
 ![1-data-structure](./images/1-data-structure.jpeg)
 
-* 变量声明
+### 变量声明
 
 ```C
 #include <stdio.h>
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-* const关键字
+### const关键字
 
 constant（恒定的，不变的）变量由const关键字修饰
 
@@ -44,9 +44,9 @@ const int NUMBER_OF_DOGS = 7;
 //在之后的程序中改变const变量的值，编译器会提示一个错误
 ```
 
-* 显示和输入变量
+### 显示和输入变量
 
-**printf**: 显示变量
+* **printf**: 显示变量
 
 ```C
 #include <stdio.h>
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-  **scanf**: 提取用户输入的值，并将其储存到变量里面。  
+* **scanf**: 提取用户输入的值，并将其储存到变量里面。  
 Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样。在scanf中，float是%f，而double是%lf
 
 ```C
