@@ -10,6 +10,7 @@
 * [变量](#变量)
 * [运算](#运算)
 * [条件表达式](#条件表达式)
+* [循环表达式](#循环表达式)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
@@ -290,4 +291,70 @@ int main(int argc, char *argv[])
 ```C
 // (条件) ? "1"对应的结果 : "0"对应的结果
 age = (adult) ? 18 : 17;
+```
+
+## [循环表达式](目录)
+
+循环是一种结构，使指令可以被执行多次
+
+### while循环
+
+```C
+while (/* 条件 */)
+{
+  // 重复执行的指令
+}
+```
+
+例子如下:
+```C
+#include <stdio.h>
+
+int main(int agrc, char *argv[]) {
+
+  // 判断
+  int number = 0;
+  while (number != 27) {
+    printf("请输入 27 ! ");
+    scanf("%d", &number);
+  }
+
+   // 计数
+  int counter = 0;
+  while (counter< 10) {
+    printf("你好 !\n");
+    counter++;
+  }
+
+  return 0;
+}
+```
+
+### do-while循环
+
+这种类型和while循环非常类似，不过比较少用到。
+
+```C
+int counter = 0;
+do {
+  printf("你好 !\n");
+  counter++;
+} while (counter < 10);
+```
+
+### for循环
+
+for循环可以实现我们想要的任何类型循环。
+
+```C
+int counter;
+
+for (counter = 0 ; counter < 10 ; counter++) {
+  printf("你好 !\n");
+}
+
+/* 括号中有三条指令，用分号（；）分隔：
+   第一条指令用于初始化
+   第二条指令用于规定条件
+   第三句指令用于更新变量的值 */
 ```
