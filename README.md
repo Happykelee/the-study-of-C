@@ -1,9 +1,10 @@
-# the study of C
+# the study of C/C++
 
-**C语言学习笔记**
+**C/C++语言学习笔记**
 
 主要学习资料如下：
 * 程序员联盟-谢恩铭：https://www.jianshu.com/nb/4555196
+* 北京大学Coursera课程-程序设计与算法：https://www.coursera.org/specializations/biancheng-suanfa
 
 ## 目录
 
@@ -83,6 +84,26 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+* C++： cin/cout
+
+```C++
+# include <iostream>
+int main()
+{
+    int a = 0,b,c,d;
+    cout<<"a的初始值是"<<a<<endl;
+    cout<<"请输入一个数"<<endl;
+    cin>>a;
+    cout<<"我刚刚给输入的a:"<<a<<endl;
+
+    cout<<"请连续输入两个数据:";
+    cin>>b>>c;
+    d = b+c;
+    cout<<"结果是"<<d<<endl;
+    return 0;
+}
+```
+
 ## [运算](#目录)
 
 ### 基本元算
@@ -349,12 +370,22 @@ for循环可以实现我们想要的任何类型循环。
 ```C
 int counter;
 
-for (counter = 0 ; counter < 10 ; counter++) {
+for(counter = 0 ; counter < 10 ; counter++) {
   printf("你好 !\n");
 }
 
 /* 括号中有三条指令，用分号（；）分隔：
    第一条指令用于初始化
    第二条指令用于规定条件
-   第三句指令用于更新变量的值 */
+   第三句指令用于更新变量的值
+*/
+```
+
+```C++
+int i = 0;
+char a[10]={'a','b','c','d','e','f','g','h','i','j'};
+for(i=0;i<10;i=i+2)
+{
+  cout<<a[i]<<endl;
+}
 ```
