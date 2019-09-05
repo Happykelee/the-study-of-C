@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="1-BubbleSort.cpp" />
+		<Unit filename="2-OddEvenSort01.cpp" />
+		<Unit filename="3-OddEvenSort02.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
