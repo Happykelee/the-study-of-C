@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1568272924 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\bacterialgrouping.cpp
+	<iostream>
+
+1568274135 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\applesbugs.cpp
+	<iostream>
+	<math.h>
+
+1568274097 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\elephantdrinkingwater.cpp
+	<iostream>
+	<math.h>
+
+1568274104 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\main.cpp
+	<iostream>
+	<math.h>
+
+1568274578 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\highestscore.cpp
+	<iostream>
+
+1568275626 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\absolutedifference.cpp
+	<iostream>
+	<cmath>
+

@@ -6,4 +6,5 @@
 
 1. [HelloWorld](HelloWorld)
 2. [PKU-Course1-task1](PKU-Course1-task1)
-2. [PKU-Course1-task2](PKU-Course1-task2)
+3. [PKU-Course1-task2](PKU-Course1-task2)
+4. [PKU-Course1-task3](PKU-Course1-task3)
