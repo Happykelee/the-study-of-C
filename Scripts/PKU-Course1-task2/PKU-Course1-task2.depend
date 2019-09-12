@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1567744928 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\main.cpp
+	<iostream>
+
+1567741618 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\1-date.cpp
+	<iostream>
+
+1567741746 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\2-oddsum.cpp
+	<iostream>
+
+1567741773 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\3-numint.cpp
+	<iostream>
+
+1567742192 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\4-numone.cpp
+	<iostream>
+
+1567744109 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task2\5-arrayreverse.cpp
+	<iostream>
+

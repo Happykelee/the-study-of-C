@@ -1,4 +1,4 @@
-# the study of C/C++
+ # the study of C/C++
 
 **C/C++语言学习笔记**
 

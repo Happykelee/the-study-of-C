@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1566891281 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\1-bubblesort.cpp
+1566891919 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\1-bubblesort.cpp
 	<iostream>
 
-1566891844 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\main.cpp
+1566891919 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\main.cpp
 	<iostream>
 
-1566891090 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\2-oddevensort01.cpp
+1566891919 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\2-oddevensort01.cpp
+	<iostream>
+
+1566891916 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task1\3-oddevensort02.cpp
 	<iostream>
 
