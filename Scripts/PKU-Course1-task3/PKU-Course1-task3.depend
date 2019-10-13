@@ -10,9 +10,9 @@
 	<iostream>
 	<math.h>
 
-1568274104 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\main.cpp
+1568276197 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\main.cpp
 	<iostream>
-	<math.h>
+	<cmath>
 
 1568274578 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\highestscore.cpp
 	<iostream>
@@ -20,4 +20,25 @@
 1568275626 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\absolutedifference.cpp
 	<iostream>
 	<cmath>
+
+1568275626 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\1-absolutedifference.cpp
+	<iostream>
+	<cmath>
+
+1568274135 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\2-applesbugs.cpp
+	<iostream>
+	<math.h>
+
+1568274097 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\4-elephantdrinkingwater.cpp
+	<iostream>
+	<math.h>
+
+1568274578 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\5-highestscore.cpp
+	<iostream>
+
+1568276201 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\6-separatedigits.cpp
+	<iostream>
+
+1570609715 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task3\3-bacterialgrouping.cpp
+	<iostream>
 

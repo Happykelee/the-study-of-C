@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1570792675 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\main.cpp
+	<iostream>
+	<cmath>
+
+1570787016 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\1-commentcar.cpp
+	<iostream>
+
+1570787358 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\2-getsum.cpp
+	<iostream>
+
+1570788450 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\3-rideandwalk.cpp
+	<iostream>
+
+1570791990 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\4-buyhouse.cpp
+	<iostream>
+	<cmath>
+
+1570792326 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\5-sumask.cpp
+	<iostream>
+	<cmath>
+
+1570792683 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task5\6-selfdivisor.cpp
+	<iostream>
+	<cmath>
+

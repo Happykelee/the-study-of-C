@@ -8,3 +8,5 @@
 2. [PKU-Course1-task1](PKU-Course1-task1)
 3. [PKU-Course1-task2](PKU-Course1-task2)
 4. [PKU-Course1-task3](PKU-Course1-task3)
+5. [PKU-Course1-task4](PKU-Course1-task4)
+6. [PKU-Course1-task5](PKU-Course1-task5)

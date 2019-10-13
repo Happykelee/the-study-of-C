@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1570619625 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\1-josephissue.cpp
+	<iostream>
+	<cmath>
+
+1570624865 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\2-fractionsum.cpp
+	<iostream>
+	<cmath>
+
+1570779758 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\main.cpp
+	<iostream>
+
+1570632361 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\3-ageanddisease.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1570632870 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\4-graderank.cpp
+	<iostream>
+
+1570705228 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task4\5-kmax.cpp
+	<iostream>
+

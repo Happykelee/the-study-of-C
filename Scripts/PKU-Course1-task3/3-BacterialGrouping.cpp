@@ -61,12 +61,12 @@ int BacterialGrouping()
     }
 
     //输出繁殖率较大的那组细菌
-    cout << 'A:' << maxDiffIndex + 1 << endl;
+    cout << maxDiffIndex + 1 << endl;
     for (int i = maxDiffIndex; i >= 0; i--) {
         cout << id[i] << endl;
     }
     //输出繁殖率较小的那组细菌
-    cout << 'B:' << n - maxDiffIndex - 1 << endl;
+    cout << n - maxDiffIndex - 1 << endl;
     for (int i = n - 1; i >= maxDiffIndex + 1; i--) {
         cout << id[i] << endl;
     }
