@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1571397782 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task7\1-leapyear.cpp
+	<iostream>
+
+1571398273 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task7\2-division357.cpp
+	<iostream>
+
+1571401262 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task7\main.cpp
+	<iostream>
+
+1571399132 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task7\3-farthestdistance.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1571399788 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task7\4-simplecalculator.cpp
+	<iostream>
+	<cmath>
+

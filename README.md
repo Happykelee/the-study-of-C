@@ -10,8 +10,9 @@
 
 * [变量](#变量)
 * [运算](#运算)
-* [条件表达式](#条件表达式)
-* [循环表达式](#循环表达式)
+* [分支结构](#分支结构)
+* [循环结构](#循环结构)
+* [数组&字符串](Array&String.md)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
@@ -80,105 +81,114 @@ const int NUMBER_OF_DOGS = 7;
 
 * **printf**: 显示变量
 
-```C
-#include <stdio.h>
-#include <stdlib.h>
+  ```C
+  #include <stdio.h>
+  #include <stdlib.h>
 
-int main(int argc, char *argv[])
-{
-    int numberOfDogs = 5, numberOfCats= 6; // 一开始，你有5只狗和6只猫
+  int main(int argc, char *argv[])
+  {
+      int numberOfDogs = 5, numberOfCats= 6; // 一开始，你有5只狗和6只猫
 
-    printf("你有 %d 只狗，还有 %d 只猫\n", numberOfDogs, numberOfCats);
-    printf("**** 跑了一只狗 ****\n");
-    numberOfDogs= 4; // 刚跑了一只狗，只有4只了
-    printf("啊呀，你只剩下 %d 只狗了\n", numberOfDogs);
+      printf("你有 %d 只狗，还有 %d 只猫\n", numberOfDogs, numberOfCats);
+      printf("**** 跑了一只狗 ****\n");
+      numberOfDogs= 4; // 刚跑了一只狗，只有4只了
+      printf("啊呀，你只剩下 %d 只狗了\n", numberOfDogs);
 
-    return 0;
-}
-```
+      return 0;
+  }
+  ```
 
 * **scanf**: 提取用户输入的值，并将其储存到变量里面。  
 Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样. 在scanf中，float是%f，而double是%lf.
 
-```C
-int main(int argc, char *argv[])
-{
-    int sum = 0; // 把钱数初始化为零
+  ```C
+  int main(int argc, char *argv[])
+  {
+      int sum = 0; // 把钱数初始化为零
 
-    printf("你身上有多少钱 ? ");
-    scanf("%d", &sum); // 请求用户输入钱数
-    printf("你有 %d 块钱啊，那还不快快地交出来 !\n", sum);
+      printf("你身上有多少钱 ? ");
+      scanf("%d", &sum); // 请求用户输入钱数
+      printf("你有 %d 块钱啊，那还不快快地交出来 !\n", sum);
 
-    return 0;
-}
-```
+      return 0;
+  }
+  ```
 * **C++： cin/cout**
+  * **输入缓冲区**:键盘输出---->输入缓冲区---->程序从输入缓冲区读取输入，指针标定数据的读取位置，只能往后移动。
+  * 另，字符和字符串的输入输出详情见[Array&String.md](Array&String.md)的“**字符/字符数组/字符串的输入与输出**”部分。
+  ```C++
+  # include <iostream>
+  #include <iomanip>
+  int main()
+  {
+      int a = 0,b,c,d;
+      cout<<"a的初始值是"<<a<<endl;
+      cout<<"请输入一个数"<<endl;
+      cin>>a; //从键盘中输入abc（错误，存为0）
+      cout<<"我刚刚给输入的a:"<<a<<endl;
 
-```C++
-# include <iostream>
-#include <iomanip>
-int main()
-{
-    int a = 0,b,c,d;
-    cout<<"a的初始值是"<<a<<endl;
-    cout<<"请输入一个数"<<endl;
-    cin>>a;
-    cout<<"我刚刚给输入的a:"<<a<<endl;
+      cout<<"请连续输入两个数据:";
+      cin>>b>>c;
+      d = b+c;
+      cout<<"结果是"<<d<<endl;
 
-    cout<<"请连续输入两个数据:";
-    cin>>b>>c;
-    d = b+c;
-    cout<<"结果是"<<d<<endl;
+      //打印一个数
+      cout<<hex<<a<<endl; //十六进制
+      cout<<oct<<a<<endl; //八进制
+      cout<<dec<<a<<endl; //十进制
 
-    //打印一个数
-    cout<<hex<<a<<endl; //十六进制
-    cout<<oct<<a<<endl; //八进制
-    cout<<dec<<a<<endl; //十进制
+      # 输入一个十六进制或者八进制
+      int a = 0x33; //十六进制
+      cout<<dec<<a<<endl;
+      cout<<hex<<a<<endl;
+      int a = 033; //八进制
+      cout<<dec<<a<<endl;
+      cout<<oct<<a<<endl;
 
-    # 输入一个十六进制或者八进制
-    int a = 0x33; //十六进制
-    cout<<dec<<a<<endl;
-    cout<<hex<<a<<endl;
-    int a = 033; //八进制
-    cout<<dec<<a<<endl;
-    cout<<oct<<a<<endl;
+      float a = 3.14159265358979323846
+      double b = 3.14159265358979323846
+      long double float b = 3.14159265358979323846
+      // cout输出默认六位精度, 提高输出精度使用setprecision
+      cout << a << endl
+      cout << setprecision(100)<<a<<endl
+      cout << b << endl
+      cout << setprecision(100)<<b<<endl
+      cout << c << endl
+      cout << setprecision(100)<<c<<endl
 
-    float a = 3.14159265358979323846
-    double b = 3.14159265358979323846
-    long double float b = 3.14159265358979323846
-    // cout输出默认六位精度, 提高输出精度使用setprecision
-    cout << a << endl
-    cout << setprecision(100)<<a<<endl
-    cout << b << endl
-    cout << setprecision(100)<<b<<endl
-    cout << c << endl
-    cout << setprecision(100)<<c<<endl
+      float grade;
+      while(cin>>grade){
+        if(grade>=85)
+        cout<<grade<<'GOOD'<<endl;
+        if(grade<60)
+        cout<<grade<<'fail'<<endl;
+      }
 
-    return 0;
-}
-```
+      return 0;
+  }
+  ```
 
 ## [运算](#目录)
 
 ### 运算优先级
-  * 逻辑非>算数运算符>关系运算符>逻辑与和或>赋值运算符>逗号运算符
+* 逻辑非>算数运算符>关系运算符>逻辑与和或>赋值运算符>逗号运算符
 
 ### 赋值运算
 
-  * **=** (赋值运算符)
-    * 两边类型不同：等号右边要转换成左边的类型
-    * 长数赋给短数：截取长数的低n位送给短数
-    * 短数赋给长数：原来什么数，现在还是什么数
-    * 符号位的赋值处理：直接赋值，不用管符号位还是数字位
+* **=** (赋值运算符)
+  * 两边类型不同：等号右边要转换成左边的类型
+  * 长数赋给短数：截取长数的低n位送给短数
+  * 短数赋给长数：原来什么数，现在还是什么数
+  * 符号位的赋值处理：直接赋值，不用管符号位还是数字位
 
-  * **表达式**
-    * 赋值语句表达式是有“值”的
-    * 复合的赋值运算
-    * 连续的赋值运算：由右向左
+* **表达式**
+  * 赋值语句表达式是有“值”的
+  * 复合的赋值运算
+  * 连续的赋值运算：由右向左
 
 ### 算数运算
 
-  * **基本的算数运算**
+* **基本的算数运算**
 
   | 运算 | 符号 | 备注 |
   |-----|-----|-----|
@@ -188,30 +198,31 @@ int main()
   | 除 | / |整数相除和浮点数相除需要注意|
   | 取模 | % |
 
-  * **自增自减运算**
-    * ++i/--i: 在使用i之前，先讲i的值加（减）1
-    * i++/i--: 在使用i之后，先讲i的值加（减）1
-    * ++/--不能用于表达式：(i+j)++ 错！！！
-    * 输出自增自减：输出语句有多个表达式，优先计算右边（VC平台下）
+* **自增自减运算**
+  * ++i/--i: 在使用i之前，先讲i的值加（减）1
+  * i++/i--: 在使用i之后，先讲i的值加（减）1
+  * ++/--不能用于表达式：(i+j)++ 错！！！
+  * 输出自增自减：输出语句有多个表达式，优先计算右边（VC平台下）
 
-  ```C++
-  int i=3,j;
-  j = ++i; //i=4,j=4
-  j = i++; //i=5,j=4
-  cout << ++i;
-  cout << i++;
+```C++
+int i=3,j;
+j = ++i; //i=4,j=4
+j = i++; //i=5,j=4
+cout << ++i;
+cout << i++;
 
-  int number = 2;
-  number++; //自增运算: 结果+1操作
-  number--; //自减运算
+int number = 2;
+number++; //自增运算: 结果+1操作
+number--; //自减运算
 
-  // 复合赋值运算
-  number += 4; // number变为6
-  number -= 3; // number变为3
-  number *= 5; // number变为15
-  number /= 3; // number变为5
-  number %= 3; // number变为2 （因为 5 = 1 * 3 + 2）
-  ```
+// 复合赋值运算
+number += 4; // number变为6
+number -= 3; // number变为3
+number *= 5; // number变为15
+number /= 3; // number变为5
+number %= 3; // number变为2 （因为 5 = 1 * 3 + 2）
+```
+
 ### 关系运算
 
   | 运算 | 符号 |
@@ -225,19 +236,19 @@ int main()
 
 ### 逻辑运算
 
-  * **三种逻辑运算符**
-    * 逻辑与: &&
-    * 逻辑或: ||
-    * 逻辑非: ！
-  * **优先级**：非>与>或
-  * 逻辑运算符两侧可以是任何类型
+* **三种逻辑运算符**
+  * 逻辑与: &&
+  * 逻辑或: ||
+  * 逻辑非: ！
+* **优先级**：非>与>或
+* 逻辑运算符两侧可以是任何类型
 
 ### 其他运算
 
-  * **逗号运算符**：表达式1,表达式2,……,表达式n（用逗号将两个表达式连起来，从左往右求）
-  * **条件运算符**：表达式1?表达式2:表达式3（如果表达式1的值为真，则输出表达式2的值，否则输出表达式3的值）
-  * **强制类型转换**：(类型名)(表达式)
-  * **位运算**：指进行二进制位的运算（按位与&, 按位或|, 异或^, 按位取反~, 左移<<, 右移>>）
+* **逗号运算符**：表达式1,表达式2,……,表达式n（用逗号将两个表达式连起来，从左往右求）
+* **条件运算符**：表达式1?表达式2:表达式3（如果表达式1的值为真，则输出表达式2的值，否则输出表达式3的值）
+* **强制类型转换**：(类型名)(表达式)
+* **位运算**：指进行二进制位的运算（按位与&, 按位或|, 异或^, 按位取反~, 左移<<, 右移>>）
 
 ### 数学库
 

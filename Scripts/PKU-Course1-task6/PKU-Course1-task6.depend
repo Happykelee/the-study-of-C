@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1571314042 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\main.cpp
+	<iostream>
+
+1571012288 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\1-numofchract.cpp
+	<iostream>
+
+1571056571 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\2-comparechract.cpp
+	<iostream>
+
+1571220024 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\3-longestchract.cpp
+	<iostream>
+
+1571221391 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\4-transformrow.cpp
+	<iostream>
+	<iomanip>
+
+1571309057 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\5-detectionabnormalcell.cpp
+	<iostream>
+	<iomanip>
+
+1571309772 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\6-circleshift.cpp
+	<iostream>
+	<iomanip>
+
+1571314157 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\7-median.cpp
+	<iostream>
+	<iomanip>
+
+1571313620 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\8-treeoutschool.cpp
+	<iostream>
+	<iomanip>
+
+1571314173 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course1-task6\7-median-2.cpp
+	<iostream>
+	<iomanip>
+
