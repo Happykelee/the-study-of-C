@@ -80,7 +80,7 @@ int[5][3][4]; //五个三行四列的数组（片/行/列）
 * **下标做数轴**
   * 例题：输出100以内的素数
   ```C++
-  #include<smath>
+  #include<cmath>
   const double C=sqrt(100.0); //根据初等数论，只需要小于sqrt(100.0)
   int a[100]={0},sum=0;
   for(int i=2;i<C;i++){
@@ -151,7 +151,7 @@ char weekday[7][11] = {'Sunday','Monday','Tuesday','Wednesday','Thursday','Frida
   * cin;
   * cin.get(): cin.get(ch,10,'\n') \\第三个参数为指定终止符，默认为\n
   * cin.getline(): 用法类似
-  * cin.get()和cin.getline()的区别：getline遇到终止标识符借书，缓冲区指针移到终止标识符之后；get遇到终止字符是停止读取，指针不移动
+  * cin.get()和cin.getline()的区别：getline遇到终止标识符结束，缓冲区指针移到终止标识符之后；get遇到终止字符是停止读取，指针不移动
 
   ```C++
   char a[10]="Computer";

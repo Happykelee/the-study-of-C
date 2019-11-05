@@ -21,7 +21,7 @@
 #include <iostream>
 
 using namespace std;
-
+//BacterialGrouping
 int BacterialGrouping()
 {
     int n; // n为细菌的数量

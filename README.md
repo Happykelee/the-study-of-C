@@ -13,6 +13,7 @@
 * [分支结构](#分支结构)
 * [循环结构](#循环结构)
 * [数组&字符串](Array&String.md)
+* [函数](Function.md)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
@@ -117,7 +118,7 @@ Note: 对于float和double来说，printf里面他们的替代符号都是%f， 
   * **输入缓冲区**:键盘输出---->输入缓冲区---->程序从输入缓冲区读取输入，指针标定数据的读取位置，只能往后移动。
   * 另，字符和字符串的输入输出详情见[Array&String.md](Array&String.md)的“**字符/字符数组/字符串的输入与输出**”部分。
   ```C++
-  # include <iostream>
+  #include <iostream>
   #include <iomanip>
   int main()
   {

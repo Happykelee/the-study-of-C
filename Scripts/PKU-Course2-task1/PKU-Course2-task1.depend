@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1572951875 source:c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\main.cpp
+	"FindIndex.h"
+	"FourGreatLakes.h"
+	"InvoiceStats.h"
+	"TomorrowNeverKnows.h"
+	"FluSpread.h"
+
+1572860809 c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\findindex.h
+	<iostream>
+
+1572861568 c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\fourgreatlakes.h
+	<iostream>
+
+1572877896 c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\invoicestats.h
+	<iostream>
+	<iomanip>
+
+1572944896 c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\tomorrowneverknows.h
+	<iostream>
+	<cmath>
+
+1572952936 c:\users\jety2\documents\github\the-study-of-c\scripts\pku-course2-task1\fluspread.h
+	<iostream>
+
