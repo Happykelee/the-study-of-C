@@ -1,8 +1,8 @@
-# the study of C/C++
+# [the study of C/C++](README.md)
 
 **C/C++语言学习笔记**
 
-## [函数](README.md)
+## 函数
 
 ### 函数的定义
 
@@ -14,15 +14,15 @@
 
 **函数调用的方式**
 
-* 作为独立语句，例如：stringPrint();
-* 作为表达式的一部分，例如：num=max(numA,numB)/2;
-* 以实参形式出现在其他函数的调用中，例如：number=max(sum(-5,100),numC);
+* 作为独立语句，例如：```stringPrint()```;
+* 作为表达式的一部分，例如：```num=max(numA,numB)/2```;
+* 以实参形式出现在其他函数的调用中，例如：```number=max(sum(-5,100),numC)```;
 
 **函数是C程序的基本构成单元**
 
 * 一个C程序由一个或多个源程序文件组成。
 * 一个源程序文件可以由一个或多个函数组成。
-* 函数可以保存在头文件中，例如：# include "max.h"。另外，在VC环境下<>框定的文件名优先搜索系统目录，“”框定下的文件名优先搜索当前目录。
+* 函数可以保存在头文件中，例如：```#include "max.h"```。另外，在VC环境下<>框定的文件名优先搜索系统目录，“”框定下的文件名优先搜索当前目录。
 
 ```C++
 #include<iostream>
@@ -311,5 +311,220 @@ int get_month(int leap_year){
       break;
   }
   return ++j;
+}
+```
+
+## 递归
+
+### 什么是递归
+
+**函数的嵌套调用**
+  * 函数不能嵌套定义：所有函数一律平等
+  * 函数可以嵌套调用：无论嵌套多少层原理上是一样的
+  * 函数能不能调用自己？
+  ```C++
+  \\阶乘
+  #include<iostream>
+  using namespace std;
+  int fact(int n)
+  {
+    if(n==1)
+      return 1;
+    else
+      return n*fact(n-1);
+  }
+  int main(){
+    cout<<fact(4)<<endl;
+    return 0;
+  }
+  ```
+
+**递归定义**
+  * 一个函数在其定义中直接或间接调用自身的一种方法；
+  *  递归调用与普通嵌套调用没有区别！！！！!
+
+### 深入理解递归的过程
+
+```C++
+\\简单例子
+#include<iostream>
+using namespace std;
+int recur()
+{
+  char c;
+  c = cin.get();
+  if(c!='\n')
+    recur();
+  cout<<c;
+  return 0;
+}
+int main(){
+  recur();
+  return 0;
+}
+```
+
+### 递归的作用
+
+**用递归来完成递推**
+  * 不同：递推的关注点放在起始点条件，而递归的关注点放在求解目标上；
+  * 相同：重在表现第i次与第i+1次的关系。
+  * 方法
+    * 把关注点放在要求解的目标上；
+    * 找到第n次做与第n-1次做之间的关系；
+    * 确定第1次的返回结果。
+  ```C++
+  /*切饼
+  q(n) = q(n-1)+n;
+  */
+  #include<iostream>
+  using namespace std;
+  int q(int n)
+  {
+    if(n==0)
+      return 1;
+    else
+      return(n+q(n-1));
+  }
+  int main(){
+    cout<<q(4)<<endl;
+    return 0;
+  }
+  ```
+  ```C++
+  /*斐波那契数列
+  fab(n) = fab(n-1)+fab(n-2);
+  */
+  #include<iostream>
+  using namespace std;
+  int fab(int n)
+  {
+    if(n==1)
+    return 1;
+    if(n==2)
+    return 1;
+    else
+      return(fab(n-1)+fab(n-2));
+  }
+  int main(){
+    cout<<fab(4)<<endl;
+    return 0;
+  }
+  ```
+
+**模拟连续发生的动作**
+
+  * 方法
+    * 搞清楚连续发生的动作是什么；
+    * 搞清楚不同次动作之间的关系；
+    * 搞清楚边界条件是什么。
+
+```C++
+//将123转换成等值的二进制数
+void convert(int x)
+{
+  if((x/2)!=0)
+  {
+    convert(x/2);
+    cout << x%2; //逆序打印
+  }
+  else
+    cout<<x;
+}
+int main()
+{
+  int x;
+  cin>>x;
+  convert(x);
+  return 0;
+}
+```
+```C++
+/*汉诺塔问题
+要实现: move(n,A,B,C)
+需进行(简化成两次移动n-1个盘子)：
+        move(n-1,A,C,B)
+        move n from A to C
+        move(n-1,B,A,C)
+*/
+void move(int m,char x,char y,char z)
+//将m个盘子从A经过B移动到C
+{
+  if(m==1)
+    cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
+  else
+  {
+    move(m-1,x,z,y);
+    cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
+    move(m-1,y,x,z);
+  }
+}
+int main(){
+  int n;
+  cout<<"请输入盘数n=";
+  cin>>n;
+  cout<<"在3根柱子上移"<<n<<"只盘的步骤为："<<endl;
+  move(n,'A','B','C');
+  return 0;
+}
+```
+```C++
+/*
+【放苹果】
+把M个同样的苹果放到N个同样的盘子里，允许有的盘子不放，问共有多少种不同的分法？（和顺序无关）
+【分析】
+1、如果：盘子数＞苹果数
+  if(n>m) f(m,n)=f(m,m)
+2、如果：苹果数＞=盘子数
+  下面两种情况下放置方式的和
+  ① 有盘子空着: f(m,n)=f(m,n-1)
+  ② 没盘子空着: f(m,n)=f(m-n,n)
+*/
+int count(int m, int n){
+  if(m==0||n==1) return 1;
+  //递归出口：当只有0个苹果或者只有1个盘子
+  //也可以写成(m<=1||n<=1)
+  if(m<n)
+    return count(m,m);
+  else
+    return count(m,n-1)+count(m-n,n);
+}
+int main(){
+  int apples, plates;
+  cin>>apples>>plates;
+  cout<<count(apples,plates);
+  return 0;
+}
+```
+
+**进行“自动的分析”**
+
+```C++
+/*
+【逆波兰表达式】
+逆波兰表达式是一种把运算符前置的算术表达式：
+  如2+3的逆波兰表达式为+23
+  如(2+3)*4的逆波兰表达式为*+234
+编写程序求解任一仅包 + - * / 四个双目运算符的逆波兰表达式的值。
+【分析】
+读取运算符，将后面的表达式分成前后两个独立部分，且分别都是独立的逆波兰表达式；
+第一个独立部分继续上述分析
+*/
+
+double notation(){
+  char str[10];
+  cin>>str;
+  switch(str[0])
+  {
+    case '+': return notation() + notation();
+    case '-': return notation() - notation();
+    case '*': return notation() * notation();
+    case '/': return notation() / notation();
+    default: return atof(str);
+  }
+}
+int main(){
+  cout<<notation();
+  return 0;
 }
 ```

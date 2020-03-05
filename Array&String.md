@@ -1,13 +1,13 @@
-# the study of C/C++
+# [the study of C/C++](README.md)
 
 **C/C++语言学习笔记**
 
-## [数组&字符串](README.md)
+## 数组
 
 ### 一维数组
 
   * 基本格式：类型 数据名[常量表达式]
-  * 例子：float sheep[10];
+  * 例子：```float sheep[10]```;
   * **再次强调**：数组下标从0开始。
 
 ```C++
@@ -97,11 +97,13 @@ int[5][3][4]; //五个三行四列的数组（片/行/列）
     if(a[i]==0) cout<<i<<"";
   }
   ```
+
+## 字符串
+
 ### 字符数组和字符串
 
 * 所有以\0为结尾的字符数组都可以被看作是字符串，同理，所有字符串都可以被看作是以\0为结尾的字符数组。
-* 在数组定义并初始化的时候：
-  char c[6] = "China"
+* 在数组定义并初始化的时候：```char c[6] = "China"```
   但**不能**用赋值语句将一个字符串常量或字符数组**直接赋给另一个字符数组**。
 
 ```C++
@@ -149,7 +151,7 @@ char weekday[7][11] = {'Sunday','Monday','Tuesday','Wednesday','Thursday','Frida
   ```
 * 一串字符的输出输入
   * cin;
-  * cin.get(): cin.get(ch,10,'\n') \\第三个参数为指定终止符，默认为\n
+  * cin.get(): ```cin.get(ch,10,'\n') //第三个参数为指定终止符，默认为\n```
   * cin.getline(): 用法类似
   * cin.get()和cin.getline()的区别：getline遇到终止标识符结束，缓冲区指针移到终止标识符之后；get遇到终止字符是停止读取，指针不移动
 
@@ -198,7 +200,7 @@ char weekday[7][11] = {'Sunday','Monday','Tuesday','Wednesday','Thursday','Frida
   }
   ```
 
-  * 输入两个字符串，将其中较短的串接到长的串后面。有很多系统函数 **#include \<string\>**.
+  * 输入两个字符串，将其中较短的串接到长的串后面。有很多系统函数 ```#include <string>```.
   ```C++
   char str1[40],str2[40];
   cin.getline(str1,20);
