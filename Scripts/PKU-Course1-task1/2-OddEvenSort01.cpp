@@ -1,21 +1,21 @@
 /*
-¡¾ÆæÅ¼ÅÅÐò01¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÇëÊäÈëÊ®¸öÕûÊý£¬½«Ê®¸öÕûÊý°´ÉýÐòÅÅÁÐÊä³ö£¬²¢ÇÒÆæÊýÔÚÇ°£¬Å¼ÊýÔÚºó¡£
-ÊäÈë£ºÊäÈëÊ®¸öÕûÊý¡£
-Êä³ö£º°´ÕÕÆæÅ¼ÅÅÐòºÃµÄÊ®¸öÕûÊý¡£
+ã€å¥‡å¶æŽ’åº01ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šè¯·è¾“å…¥åä¸ªæ•´æ•°ï¼Œå°†åä¸ªæ•´æ•°æŒ‰å‡åºæŽ’åˆ—è¾“å‡ºï¼Œå¹¶ä¸”å¥‡æ•°åœ¨å‰ï¼Œå¶æ•°åœ¨åŽã€‚
+è¾“å…¥ï¼šè¾“å…¥åä¸ªæ•´æ•°ã€‚
+è¾“å‡ºï¼šæŒ‰ç…§å¥‡å¶æŽ’åºå¥½çš„åä¸ªæ•´æ•°ã€‚
 */
 #include <iostream>
 using namespace std;
 
-int OddEvenSort01() {
+int main(){
     int a[10];
     for (int i = 0; i < 10; i++) {
         cin >> a[i];
     }
-    // Ê×ÏÈ£¬ÎÒÃÇ°ÑÆæÊý·Åµ½Êý×é×ó±ß£¬Å¼Êý·Åµ½Êý×éÓÒ±ß
-    int l = 0, r = 9; //ÓÃ×óÊÖºÍÓÒÊÖ·Ö±ðÖ¸ÏòÊý×éÁ½¶Ë
+    // é¦–å…ˆï¼Œæˆ‘ä»¬æŠŠå¥‡æ•°æ”¾åˆ°æ•°ç»„å·¦è¾¹ï¼Œå¶æ•°æ”¾åˆ°æ•°ç»„å³è¾¹
+    int l = 0, r = 9; //ç”¨å·¦æ‰‹å’Œå³æ‰‹åˆ†åˆ«æŒ‡å‘æ•°ç»„ä¸¤ç«¯
     while (l <= r) {
         bool leftIsOdd = a[l] % 2 == 1;
         bool rightIsEven = a[r] % 2 == 0;
@@ -29,7 +29,7 @@ int OddEvenSort01() {
             a[r] = temp;
         }
     }
-  // ¶Ôl×ó±ß£¨ÆæÊý²¿·Ö£©½øÐÐÃ°ÅÝÅÅÐò
+    // å¯¹lå·¦è¾¹ï¼ˆå¥‡æ•°éƒ¨åˆ†ï¼‰è¿›è¡Œå†’æ³¡æŽ’åº
     int start = 0, end = l;
     for (int i = start; i < end - 1; i++) {
         for (int j = start + 1; j < start + end - i; j++) {
@@ -40,7 +40,7 @@ int OddEvenSort01() {
             }
         }
     }
-  // ¶ÔlÓÒ±ß£¨Å¼Êý²¿·Ö£©½øÐÐÃ°ÅÝÅÅÐò
+    // å¯¹lå³è¾¹ï¼ˆå¶æ•°éƒ¨åˆ†ï¼‰è¿›è¡Œå†’æ³¡æŽ’åº
     start = l, end = 10;
     for (int i = start; i < end - 1; i++) {
         for (int j = start + 1; j < start + end - i; j++) {
@@ -57,4 +57,3 @@ int OddEvenSort01() {
     }
   return 0;
 }
-

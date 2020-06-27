@@ -1,20 +1,20 @@
 /*
-¡¾Çó×ÖÄ¸µÄ¸öÊý¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÔÚÒ»¸ö×Ö·û´®ÖÐÕÒ³öÔªÒô×ÖÄ¸a,e,i,o,u³öÏÖµÄ´ÎÊý¡£
-ÊäÈë£ºÊäÈëÒ»ÐÐ×Ö·û´®£¨×Ö·û´®ÖÐ¿ÉÄÜÓÐ¿Õ¸ñ£¬
-      ÇëÓÃcin.getline(s,counts)·½·¨°ÑÒ»ÐÐ×Ö·û´®ÊäÈëµ½×Ö·ûÊý×ésÖÐ£¬ÆäÖÐcountsÊÇsµÄ×î´ó³¤¶È£¬
-      ÕâµÀÌâÀïÃæ¿ÉÒÔÖ±½ÓÐ´80¡££©£¬×Ö·û´®³¤¶ÈÐ¡ÓÚ80¸ö×Ö·û¡£
-Êä³ö£ºÊä³öÒ»ÐÐ£¬ÒÀ´ÎÊä³öa,e,i,o,uÔÚÊäÈë×Ö·û´®ÖÐ³öÏÖµÄ´ÎÊý£¬ÕûÊýÖ®¼äÓÃ¿Õ¸ñ·Ö¸ô¡£
+ã€æ±‚å­—æ¯çš„ä¸ªæ•°ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šåœ¨ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­æ‰¾å‡ºå…ƒéŸ³å­—æ¯a,e,i,o,uå‡ºçŽ°çš„æ¬¡æ•°ã€‚
+è¾“å…¥ï¼šè¾“å…¥ä¸€è¡Œå­—ç¬¦ä¸²ï¼ˆå­—ç¬¦ä¸²ä¸­å¯èƒ½æœ‰ç©ºæ ¼ï¼Œ
+      è¯·ç”¨cin.getline(s,counts)æ–¹æ³•æŠŠä¸€è¡Œå­—ç¬¦ä¸²è¾“å…¥åˆ°å­—ç¬¦æ•°ç»„sä¸­ï¼Œå…¶ä¸­countsæ˜¯sçš„æœ€å¤§é•¿åº¦ï¼Œ
+      è¿™é“é¢˜é‡Œé¢å¯ä»¥ç›´æŽ¥å†™80ã€‚ï¼‰ï¼Œå­—ç¬¦ä¸²é•¿åº¦å°äºŽ80ä¸ªå­—ç¬¦ã€‚
+è¾“å‡ºï¼šè¾“å‡ºä¸€è¡Œï¼Œä¾æ¬¡è¾“å‡ºa,e,i,o,uåœ¨è¾“å…¥å­—ç¬¦ä¸²ä¸­å‡ºçŽ°çš„æ¬¡æ•°ï¼Œæ•´æ•°ä¹‹é—´ç”¨ç©ºæ ¼åˆ†éš”ã€‚
 */
 
 #include<iostream>
 using namespace std;
-int NumofChract(){
+int main(){
     char str[80];
-    int a[5]={0};
     while(cin.getline(str,80)){
+        int a[5] = {0};
         for(int i=0;str[i]!='\0';i++){
             switch(str[i]){
             case 'a': a[0]++;break;

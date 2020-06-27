@@ -1,22 +1,22 @@
 /*
-¡¾Ã°ÅÝÅÅÐò¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÇë¸ù¾Ý×Ô¼ºµÄÀí½â±àÐ´Ã°ÅÝÅÅÐòËã·¨£¬Êý×é´óÐ¡1000ÒÔÄÚ¡£
-ÊäÈë£ºµÚÒ»ÐÐÊÇn±íÊ¾Êý×éµÄ´óÐ¡£¬½Ó×ÅnÐÐÊÇÊý×éµÄn¸öÔªËØ¡£
-Êä³ö£ºÅÅÐòÖ®ºóµÄ½á¹û£¬Ò»¸öÔªËØÒ»ÐÐ¡£
+ã€å†’æ³¡æŽ’åºã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šè¯·æ ¹æ®è‡ªå·±çš„ç†è§£ç¼–å†™å†’æ³¡æŽ’åºç®—æ³•ï¼Œæ•°ç»„å¤§å°1000ä»¥å†…ã€‚
+è¾“å…¥ï¼šç¬¬ä¸€è¡Œæ˜¯nè¡¨ç¤ºæ•°ç»„çš„å¤§å°ï¼ŒæŽ¥ç€nè¡Œæ˜¯æ•°ç»„çš„nä¸ªå…ƒç´ ã€‚
+è¾“å‡ºï¼šæŽ’åºä¹‹åŽçš„ç»“æžœï¼Œä¸€ä¸ªå…ƒç´ ä¸€è¡Œã€‚
 */
 #include <iostream>
 using namespace std;
 
-int BubbleSort(){
-    int n, a[1000]; // Ò»¹²n¸öÊý£¬n²»³¬¹ý1000¡£aÓÃÀ´±£´æÕâÐ©Êý
-    cin >> n;       // ÊäÈën¸öÊý
+int main(){
+    int n, a[1000]; // ä¸€å…±nä¸ªæ•°ï¼Œnä¸è¶…è¿‡1000ã€‚aç”¨æ¥ä¿å­˜è¿™äº›æ•°
+    cin >> n;       // è¾“å…¥nä¸ªæ•°
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
 
-// Ã°ÅÝ£¬²»¶Ï±È½ÏÏàÁÚµÄÁ½¸öÊý£¬Èç¹ûË³Ðò´íÁË¾Í½»»»Î»ÖÃ
+// å†’æ³¡ï¼Œä¸æ–­æ¯”è¾ƒç›¸é‚»çš„ä¸¤ä¸ªæ•°ï¼Œå¦‚æžœé¡ºåºé”™äº†å°±äº¤æ¢ä½ç½®
     for (int i = 0; i < n - 1; i++) {
         for (int j = 1; j < n - i; j++) {
             if (a[j - 1] > a[j]) {
@@ -27,7 +27,7 @@ int BubbleSort(){
         }
     }
 
-// ÒÀ´ÎÊä³ö
+// ä¾æ¬¡è¾“å‡º
     for (int i = 0; i < n; i++) {
         cout << a[i] << endl;
     }

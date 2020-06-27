@@ -1,11 +1,11 @@
 /*
-¡¾Æ»¹ûºÍ³æ×Ó¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÄãÂòÁËÒ»Ïän¸öÆ»¹û£¬ºÜ²»ÐÒµÄÊÇÂòÍêÊ±Ïä×ÓÀï»ì½øÁËÒ»Ìõ³æ×Ó¡£
-      ³æ×ÓÃ¿xÐ¡Ê±ÄÜ³ÔµôÒ»¸öÆ»¹û£¬¼ÙÉè³æ×ÓÔÚ³ÔÍêÒ»¸öÆ»¹ûÖ®Ç°²»»á³ÔÁíÒ»¸ö£¬ÄÇÃ´¾­¹ýyÐ¡Ê±Äã»¹ÓÐ¶àÉÙ¸öÍêÕûµÄÆ»¹û£¿
-ÊäÈë£ºÊäÈë½öÒ»ÐÐ£¬°üÀ¨n£¬xºÍy£¨¾ùÎªÕûÊý£©¡£
-Êä³ö£ºÊä³öÒ²½öÒ»ÐÐ£¬Ê£ÏÂµÄÆ»¹û¸öÊý¡£
+ã€è‹¹æžœå’Œè™«å­ã€?
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ?: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šä½ ä¹°äº†ä¸€ç®±nä¸ªè‹¹æžœï¼Œå¾ˆä¸å¹¸çš„æ˜¯ä¹°å®Œæ—¶ç®±å­é‡Œæ··è¿›äº†ä¸€æ¡è™«å­ã€?
+      è™«å­æ¯xå°æ—¶èƒ½åƒæŽ‰ä¸€ä¸ªè‹¹æžœï¼Œå‡è®¾è™«å­åœ¨åƒå®Œä¸€ä¸ªè‹¹æžœä¹‹å‰ä¸ä¼šåƒå¦ä¸€ä¸ªï¼Œé‚£ä¹ˆç»è¿‡yå°æ—¶ä½ è¿˜æœ‰å¤šå°‘ä¸ªå®Œæ•´çš„è‹¹æžœï¼Ÿ
+è¾“å…¥ï¼šè¾“å…¥ä»…ä¸€è¡Œï¼ŒåŒ…æ‹¬nï¼Œxå’Œyï¼ˆå‡ä¸ºæ•´æ•°ï¼‰ã€?
+è¾“å‡ºï¼šè¾“å‡ºä¹Ÿä»…ä¸€è¡Œï¼Œå‰©ä¸‹çš„è‹¹æžœä¸ªæ•°ã€?
 */
 
 #include <iostream>
@@ -13,12 +13,12 @@
 
 using namespace std;
 
-int ApplesBugs()
+int main()
 {
     int n,x,y;
     cin >> n >> x >> y;
-    int eaten = ceil(y/x);
-    cout << n-eaten << endl;
+    int eaten = ceil(float(y)/float(x));
+    cout << (n>eaten?n-eaten:0) << endl;
     return 0;
 }
 

@@ -1,32 +1,45 @@
 /*
-¡¾×Ö·û´®²åÈë¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÓÐÁ½¸ö×Ö·û´®strºÍsubstr£¬strµÄ×Ö·û¸öÊý²»³¬¹ý10£¬substrµÄ×Ö·û¸öÊýÎª3¡£
-      £¨×Ö·û¸öÊý²»°üÀ¨×Ö·û´®½áÎ²´¦µÄ'\0'¡££©
-      ½«substr²åÈëµ½strÖÐASCIIÂë×î´óµÄÄÇ¸ö×Ö·ûºóÃæ£¬ÈôÓÐ¶à¸ö×î´óÔòÖ»¿¼ÂÇµÚÒ»¸ö¡£
-ÊäÈë£ºÊäÈë°üÀ¨Èô¸ÉÐÐ£¬Ã¿Ò»ÐÐÎªÒ»×é²âÊÔÊý¾Ý£¬¸ñÊ½Îª
+ã€å­—ç¬¦ä¸²æ’å…¥ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šæœ‰ä¸¤ä¸ªå­—ç¬¦ä¸²strå’Œsubstrï¼Œstrçš„å­—ç¬¦ä¸ªæ•°ä¸è¶…è¿‡10ï¼Œsubstrçš„å­—ç¬¦ä¸ªæ•°ä¸º3ã€‚
+      ï¼ˆå­—ç¬¦ä¸ªæ•°ä¸åŒ…æ‹¬å­—ç¬¦ä¸²ç»“å°¾å¤„çš„'\0'ã€‚ï¼‰
+      å°†substræ’å…¥åˆ°strä¸­ASCIIç æœ€å¤§çš„é‚£ä¸ªå­—ç¬¦åŽé¢ï¼Œè‹¥æœ‰å¤šä¸ªæœ€å¤§åˆ™åªè€ƒè™‘ç¬¬ä¸€ä¸ªã€‚
+è¾“å…¥ï¼šè¾“å…¥åŒ…æ‹¬è‹¥å¹²è¡Œï¼Œæ¯ä¸€è¡Œä¸ºä¸€ç»„æµ‹è¯•æ•°æ®ï¼Œæ ¼å¼ä¸º
          str substr
-Êä³ö£º¶ÔÓÚÃ¿Ò»×é²âÊÔÊý¾Ý£¬Êä³ö²åÈëÖ®ºóµÄ×Ö·û´®¡£
+è¾“å‡ºï¼šå¯¹äºŽæ¯ä¸€ç»„æµ‹è¯•æ•°æ®ï¼Œè¾“å‡ºæ’å…¥ä¹‹åŽçš„å­—ç¬¦ä¸²ã€‚
 */
 
-#include<iostream>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
-int InsertString(){
-    char str1[11], str2[4];
-    int max_char = 0;
-    while(cin.getline(str1,11,' ')&&cin.getline(str2,4,'\n')){
-        for(int i=0;str1[i]!='\0';i++){
+int main(){
+    while(true){
+        char str1[15] = {0}, str2[4] = {0};
+        int max_char = 0;
+        cin.getline(str1,15,' ');
+        cin.getline(str2,4,'\n');
+        for(int i=0;str1[i]!='\0';i++)
+        {
             if (str1[i]>str1[max_char])
                 max_char=i;
         }
+        char tmp[15] = {0};
         for(int i=0;str1[i]!='\0';i++){
-            cout<<str1[i];
-            if(i==max_char)
-                for(int j=0;str2[j]!='\0';j++)
-                cout<<str2[j];
+            if(i==max_char){
+                for (int j = i + 1; str1[j] != '\0'; j++)
+                    tmp[j] = str1[j];
+                for (int j = 0; str2[j] != '\0'; j++)
+                    str1[i + 1 + j] = str2[j];
+                int len_str2 = strlen(str2);
+                for (int j = i + 1; tmp[j] != '\0'; j++)
+                    str1[j+len_str2] = tmp[j];
+                break;
+            }
         }
+        for (int i=0;str1[i]!='\0';i++)
+            cout<<str1[i];
         cout<<endl;
     }
     return 0;

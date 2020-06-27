@@ -1,21 +1,21 @@
 /*
-¡¾ÕÒ³öµÚk´óµÄÊý¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÓÃ»§ÊäÈëNºÍK£¬È»ºó½Ó×ÅÊäÈëN¸öÕýÕûÊý£¨ÎÞÐòµÄ£©£¬³ÌÐòÔÚ²»¶ÔN¸öÕûÊýÅÅÐòµÄÇé¿öÏÂ£¬ÕÒ³öµÚK´óµÄÊý¡£
-      ×¢Òâ£¬µÚK´óµÄÊýÒâÎ¶×Å´Ó´óµ½Ð¡ÅÅÔÚµÚKÎ»µÄÊý¡£
-ÊäÈë£º
+ã€æ‰¾å‡ºç¬¬kå¤§çš„æ•°ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šç”¨æˆ·è¾“å…¥Nå’ŒKï¼Œç„¶åŽæŽ¥ç€è¾“å…¥Nä¸ªæ­£æ•´æ•°ï¼ˆæ— åºçš„ï¼‰ï¼Œç¨‹åºåœ¨ä¸å¯¹Nä¸ªæ•´æ•°æŽ’åºçš„æƒ…å†µä¸‹ï¼Œæ‰¾å‡ºç¬¬Kå¤§çš„æ•°ã€‚
+      æ³¨æ„ï¼Œç¬¬Kå¤§çš„æ•°æ„å‘³ç€ä»Žå¤§åˆ°å°æŽ’åœ¨ç¬¬Kä½çš„æ•°ã€‚
+è¾“å…¥ï¼š
       N
       K
       a1 a2 a3 a4 ..... aN
-Êä³ö£ºb
+è¾“å‡ºï¼šb
 */
 
 #include <iostream>
 
 using namespace std;
 
-int KMax()
+int main()
 {
     int n,k,*a;
     cin >> n;
@@ -30,7 +30,7 @@ int KMax()
             if(a[i]>a[j])
                 No++;
         }
-        if(No==k){
+        if(n-No==k){
             cout << a[i] << endl;
             break;
         }

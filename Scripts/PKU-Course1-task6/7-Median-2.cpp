@@ -14,7 +14,7 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-int Median2(){
+int main(){
     int n,*a, *m, cont=0, tmp[2]={0};
     while(cin>>n){
         if(n==0)

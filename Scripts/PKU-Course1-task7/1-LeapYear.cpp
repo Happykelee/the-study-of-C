@@ -1,16 +1,16 @@
 /*
-¡¾ÅÐ¶ÏÈòÄê¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÅÐ¶ÏÄ³ÄêÊÇ·ñÊÇÈòÄê¡£
-ÊäÈë£ºÊäÈëÖ»ÓÐÒ»ÐÐ£¬°üº¬Ò»¸öÕûÊýa(0 < a < 3000)
-Êä³ö£ºÒ»ÐÐ£¬Èç¹û¹«ÔªaÄêÊÇÈòÄêÊä³öY£¬·ñÔòÊä³öN
+ã€åˆ¤æ–­é—°å¹´ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šåˆ¤æ–­æŸå¹´æ˜¯å¦æ˜¯é—°å¹´ã€‚
+è¾“å…¥ï¼šè¾“å…¥åªæœ‰ä¸€è¡Œï¼ŒåŒ…å«ä¸€ä¸ªæ•´æ•°a(0 < a < 3000)
+è¾“å‡ºï¼šä¸€è¡Œï¼Œå¦‚æžœå…¬å…ƒaå¹´æ˜¯é—°å¹´è¾“å‡ºYï¼Œå¦åˆ™è¾“å‡ºN
 */
 
 #include<iostream>
 using namespace std;
-int LeapYear(){
-    while(true){
+int main(){
+    // while(true){
         int a;
         cin>>a;
         if(a%100==0){
@@ -25,6 +25,6 @@ int LeapYear(){
             cout<<"Y"<<endl;
         else
             cout<<"N"<<endl;
-    }
+    // }
     return 0;
 }

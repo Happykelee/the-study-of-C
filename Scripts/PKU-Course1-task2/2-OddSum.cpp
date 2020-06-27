@@ -1,22 +1,23 @@
 /*
-¡¾ÆæÊýÇóºÍ¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£º¼ÆËãÕýÕûÊýmµ½n(°üÀ¨mºÍn)Ö®¼äµÄËùÓÐÆæÊýµÄºÍ¡£ÆäÖÐ£¬m²»´óÓÚn£¬ÇÒn²»´óÓÚ300.
-      ÀýÈçm=3,n=12,ÆäºÍÔòÎª£º3+5+7+9+11=35.
-ÊäÈë£ºÁ½¸öÊýmºÍn£¬Á½¸öÊýÒÔ¿Õ¸ñ¼ä¸ô£¬ÆäÖÐ0<=m <= n <= 300.
-Êä³ö£ºÆæÊýÖ®ºÍ¡£
+ã€å¥‡æ•°æ±‚å’Œã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šè®¡ç®—æ­£æ•´æ•°måˆ°n(åŒ…æ‹¬må’Œn)ä¹‹é—´çš„æ‰€æœ‰å¥‡æ•°çš„å’Œã€‚å…¶ä¸­ï¼Œmä¸å¤§äºŽnï¼Œä¸”nä¸å¤§äºŽ300.
+      ä¾‹å¦‚m=3,n=12,å…¶å’Œåˆ™ä¸ºï¼š3+5+7+9+11=35.
+è¾“å…¥ï¼šä¸¤ä¸ªæ•°må’Œnï¼Œä¸¤ä¸ªæ•°ä»¥ç©ºæ ¼é—´éš”ï¼Œå…¶ä¸­0<=m <= n <= 300.
+è¾“å‡ºï¼šå¥‡æ•°ä¹‹å’Œã€‚
 */
 #include <iostream>
 using namespace std;
 
-int OddSum(){
+int main(){
     int m,n,sum=0;
     cin>>m>>n;
     if(m%2==0) m=m+1;
     if(n%2==0) n=n-1;
     sum=(m+n)*((n-m)/2+1)/2;
-    cout<<"OddSum("<<m<<"-"<<n<<"):"<<sum<<endl;
+    // cout<<"OddSum("<<m<<"-"<<n<<"):"<<sum<<endl;
+    cout<<sum<<endl;
     return 0;
 }
 

@@ -1,10 +1,10 @@
-/*
-¡¾·ÖÊýÇóºÍ¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÊäÈën¸ö·ÖÊý²¢¶ÔËûÃÇÇóºÍ£¬ÓÃÔ¼·ÖÖ®ºóµÄ×î¼òÐÎÊ½±íÊ¾¡£
-ÊäÈë£ºµÚÒ»ÐÐµÄÊäÈën,´ú±íÒ»¹²ÓÐ¼¸¸ö·ÖÊýÐèÒªÇóºÍ£¬½ÓÏÂÀ´µÄnÐÐÊÇ·ÖÊý¡£
-Êä³ö£ºÊä³öÖ»ÓÐÒ»ÐÐ£¬¼´¹éÔ¼ºóµÄ½á¹û¡£
+ï»¿/*
+ã€åˆ†æ•°æ±‚å’Œã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šè¾“å…¥nä¸ªåˆ†æ•°å¹¶å¯¹ä»–ä»¬æ±‚å’Œï¼Œç”¨çº¦åˆ†ä¹‹åŽçš„æœ€ç®€å½¢å¼è¡¨ç¤ºã€‚
+è¾“å…¥ï¼šç¬¬ä¸€è¡Œçš„è¾“å…¥n,ä»£è¡¨ä¸€å…±æœ‰å‡ ä¸ªåˆ†æ•°éœ€è¦æ±‚å’Œï¼ŒæŽ¥ä¸‹æ¥çš„nè¡Œæ˜¯åˆ†æ•°ã€‚
+è¾“å‡ºï¼šè¾“å‡ºåªæœ‰ä¸€è¡Œï¼Œå³å½’çº¦åŽçš„ç»“æžœã€‚
 */
 
 #include <iostream>
@@ -12,27 +12,27 @@
 
 using namespace std;
 
-int FractionSum()
+int main()
 {
     int n;
     cin >> n;
-    int sumn = 0, sumd = 1;//´¢´æ½á¹û£¬sumn/sumd
+    int sumn = 0, sumd = 1;//å‚¨å­˜ç»“æžœï¼Œsumn/sumd
     while (n--) {
     int num, deno;
-    char slash;//×¨ÃÅÓÃÀ´³Ôµô/µÄ
+    char slash;//ä¸“é—¨ç”¨æ¥åƒæŽ‰/çš„
     cin >> num >> slash >> deno;
-    //ÏÈÏà¼Ó a/b + c/d = (a*d+c*b)/(b*d)
+    //å…ˆç›¸åŠ  a/b + c/d = (a*d+c*b)/(b*d)
     sumn = sumn*deno + num*sumd;
     sumd = sumd*deno;
     }
-    //ºóÔ¼·Ö
-    //ÏÈÇó×î´ó¹«Ô¼Êýgcd£¬ÕâÀïÓÃµÄÊÇÅ·¼¸ÀïµÃ·¨
+    //åŽçº¦åˆ†
+    //å…ˆæ±‚æœ€å¤§å…¬çº¦æ•°gcdï¼Œè¿™é‡Œç”¨çš„æ˜¯æ¬§å‡ é‡Œå¾—æ³•
     int a = sumd, b = sumn, c;
     while (a != 0) {
     c = a; a = b%a; b = c;
     }
     int gcd = b;
-    //·Ö×Ó·ÖÄ¸Í¬Ê±³ýÒÔgcd¾Í¿ÉÒÔÍê³ÉÔ¼·Ö
+    //åˆ†å­åˆ†æ¯åŒæ—¶é™¤ä»¥gcdå°±å¯ä»¥å®Œæˆçº¦åˆ†
     sumd /= gcd;
     sumn /= gcd;
     if (sumd > 1)

@@ -1,29 +1,27 @@
 /*
-¡¾Òì³£Ï¸°û¼ì²â¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÎÒÃÇÅÄÉãµÄÒ»ÕÅCTÕÕÆ¬ÓÃÒ»¸ö¶þÎ¬Êý×éÀ´´æ´¢£¬¼ÙÉèÊý×éÖÐµÄÃ¿¸öµã´ú±íÒ»¸öÏ¸°û¡£
-      Ã¿¸öÏ¸°ûµÄÑÕÉ«ÓÃ0µ½255Ö®¼ä£¨°üÀ¨0ºÍ255£©µÄÒ»¸öÕûÊý±íÊ¾¡£
-      ÎÒÃÇ¶¨ÒåÒ»¸öÏ¸°ûÊÇÒì³£Ï¸°û£¬Èç¹ûÕâ¸öÏ¸°ûµÄÑÕÉ«Öµ±ÈËüÉÏÏÂ×óÓÒ4¸öÏ¸°ûµÄÑÕÉ«Öµ¶¼Ð¡50ÒÔÉÏ£¨°üÀ¨50£©¡£
-      Êý×é±ßÔµÉÏµÄÏ¸°ûÎÒÃÇ²»¼ì²â¡£ÏÖÔÚÎÒÃÇµÄÈÎÎñÊÇ£¬
-      ¸ø¶¨Ò»¸ö´æ´¢CTÕÕÆ¬µÄ¶þÎ¬Êý×é£¬Ð´³ÌÐòÍ³¼ÆÕÕÆ¬ÖÐÒì³£Ï¸°ûµÄÊýÄ¿¡£
-ÊäÈë£ºµÚÒ»ÐÐ°üº¬Ò»¸öÕûÊýN£¨100>=N>2£©.
-      ÏÂÃæÓÐ N ÐÐ£¬Ã¿ÐÐÓÐ N ¸ö0~255Ö®¼äµÄÕûÊý£¬ÕûÊýÖ®¼äÓÃ¿Õ¸ñ¸ô¿ª¡£
-Êä³ö£ºÊä³öÖ»ÓÐÒ»ÐÐ£¬°üº¬Ò»¸öÕûÊý£¬ÎªÒì³£Ï¸°ûµÄÊýÄ¿¡£
+ã€å¼‚å¸¸ç»†èƒžæ£€æµ‹ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šæˆ‘ä»¬æ‹æ‘„çš„ä¸€å¼ CTç…§ç‰‡ç”¨ä¸€ä¸ªäºŒç»´æ•°ç»„æ¥å­˜å‚¨ï¼Œå‡è®¾æ•°ç»„ä¸­çš„æ¯ä¸ªç‚¹ä»£è¡¨ä¸€ä¸ªç»†èƒžã€‚
+      æ¯ä¸ªç»†èƒžçš„é¢œè‰²ç”¨0åˆ°255ä¹‹é—´ï¼ˆåŒ…æ‹¬0å’Œ255ï¼‰çš„ä¸€ä¸ªæ•´æ•°è¡¨ç¤ºã€‚
+      æˆ‘ä»¬å®šä¹‰ä¸€ä¸ªç»†èƒžæ˜¯å¼‚å¸¸ç»†èƒžï¼Œå¦‚æžœè¿™ä¸ªç»†èƒžçš„é¢œè‰²å€¼æ¯”å®ƒä¸Šä¸‹å·¦å³4ä¸ªç»†èƒžçš„é¢œè‰²å€¼éƒ½å°50ä»¥ä¸Šï¼ˆåŒ…æ‹¬50ï¼‰ã€‚
+      æ•°ç»„è¾¹ç¼˜ä¸Šçš„ç»†èƒžæˆ‘ä»¬ä¸æ£€æµ‹ã€‚çŽ°åœ¨æˆ‘ä»¬çš„ä»»åŠ¡æ˜¯ï¼Œ
+      ç»™å®šä¸€ä¸ªå­˜å‚¨CTç…§ç‰‡çš„äºŒç»´æ•°ç»„ï¼Œå†™ç¨‹åºç»Ÿè®¡ç…§ç‰‡ä¸­å¼‚å¸¸ç»†èƒžçš„æ•°ç›®ã€‚
+è¾“å…¥ï¼šç¬¬ä¸€è¡ŒåŒ…å«ä¸€ä¸ªæ•´æ•°Nï¼ˆ100>=N>2ï¼‰.
+      ä¸‹é¢æœ‰ N è¡Œï¼Œæ¯è¡Œæœ‰ N ä¸ª0~255ä¹‹é—´çš„æ•´æ•°ï¼Œæ•´æ•°ä¹‹é—´ç”¨ç©ºæ ¼éš”å¼€ã€‚
+è¾“å‡ºï¼šè¾“å‡ºåªæœ‰ä¸€è¡Œï¼ŒåŒ…å«ä¸€ä¸ªæ•´æ•°ï¼Œä¸ºå¼‚å¸¸ç»†èƒžçš„æ•°ç›®ã€‚
 */
 
 #include<iostream>
 #include<iomanip>
 using namespace std;
-int DetectionAbnormalCell(){
-    while(true){
-        int N, a[100][100]={0}, abnormal=0;
+int main(){
+    int N, a[100][100] = {0}, abnormal = 0;
+    // while(true){
         cin>>N;
-        for(int i=0;i<N;i++){
-            for(int j=0;j<N;j++){
+        for(int i=0;i<N;i++)
+            for(int j=0;j<N;j++)
                 cin>>a[i][j];
-            }
-        }
         for(int i=1;i<(N-1);i++){
             for (int j=1;j<(N-1);j++){
                 if (a[i][j]<=a[i+1][j]-50&&a[i][j]<=a[i-1][j]-50&&
@@ -31,8 +29,8 @@ int DetectionAbnormalCell(){
                     abnormal++;
             }
         }
-        cout<<abnormal<<endl;
-    }
+    cout<<abnormal<<endl;
+    // }
     return 0;
 }
 

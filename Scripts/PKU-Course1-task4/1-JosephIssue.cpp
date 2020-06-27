@@ -1,14 +1,14 @@
 /*
-��Լɪ�����⡿
-��Դ: POJ
-ע�⣺��ʱ������: 1000ms �ڴ�����: 65536kB
-�������У�ֻ���ӣ���˳ʱ�뷽��Χ��һȦѡ��������Ŵӣ������
-      �ӵڣ��ſ�ʼ������һֱ���������������ĺ����˳�Ȧ�⣬
-      ʣ�µĺ����ٽ��Ŵ�1��ʼ������
-      ��������ֱ��Ȧ��ֻʣ��һֻ����ʱ��������Ӿ��Ǻ�����
-      �����������������������ı�š�
-���룺ÿ�����ÿո�ֿ���������������һ���� n, �ڶ����� m ( 0 < m,n <=300)�����һ���ǣ�0 0
-���������ÿ���������ݣ����һ�г���)���������Ҳ��һ�У����������ı�š�
+【约瑟夫问题】
+来源: POJ
+注意：总时间限制: 1000ms 内存限制: 65536kB
+描述：有ｎ只猴子，按顺时针方向围成一圈选大王（编号从１到ｎ），
+      从第１号开始报数，一直数到ｍ，数到ｍ的猴子退出圈外，
+      剩下的猴子再接着从1开始报数。
+      就这样，直到圈内只剩下一只猴子时，这个猴子就是猴王。
+      编程求输入ｎ，ｍ后，输出最后猴王的编号。
+输入：每行是用空格分开的两个整数，第一个是 n, 第二个是 m ( 0 < m,n <=300)。最后一行是：0 0
+输出：对于每行输入数据（最后一行除外)，输出数据也是一行，即最后猴王的编号。
 */
 
 #include <iostream>
@@ -16,12 +16,12 @@
 
 using namespace std;
 
-//һ�������300ֻ����
-int succedent[300]; //����������ڱ���һ�����Ӻ�һλ��˭��
-                    //���硰next[5]��ֵ��7������˵5�ź��ӵ���һλ��7�ź��ӣ�6�ź����Ѿ���֮ǰ�˳��ˡ�
-int precedent[300]; //����������ڱ���һ������ǰһλ��˭���÷�����������ơ�
+//一共最多有300只猴子
+int succedent[300]; //这个数组用于保存一个猴子后一位是谁，
+                    //比如“next[5]的值是7”就是说5号猴子的下一位是7号猴子，6号猴子已经在之前退出了。
+int precedent[300]; //这个数组用于保存一个猴子前一位是谁，用法和上面的类似。
 
-int JosephIssue()
+int main()
 {
     int n, m;
     while(true){
@@ -36,20 +36,20 @@ int JosephIssue()
 
     int current = 0;
     while(true){
-    //���һ��Ҫ��m�κţ���ôȡm-1��succedent֮�������Ҫ�˳�����ֻ����
+    //如果一共要报m次号，那么取m-1次succedent之后就是需要退出的那只猴子
         for(int count = 0; count < m-1; count++)
             current = succedent[current];
 
         int pre = precedent[current];
         int suc = succedent[current];
-        //��current�ź����˳��ܼ򵥣����ǰ�ǰһλ�ġ���һλ��ָ��current����һλ��
-        //��һλ�ġ�ǰһλ��ָ��current��ǰһλ�ͺ���
+        //让current号猴子退出很简单，就是把前一位的“下一位”指向current的下一位，
+        //下一位的“前一位”指向current的前一位就好了
         succedent[pre] = suc;
         precedent[suc] = pre;
         if (pre == suc) {
-        //���ֻʣ�������ˣ���ôÿ���˵�ǰλ�ͺ�λ����ͬһ���ˡ�
-        //current���˳��ģ���ô��һ������ʣ�µġ�
-        //���ǵ�����Ǵ�0��ŵģ����ʱҪ��һ
+        //如果只剩下两个了，那么每个人的前位和后位就是同一个了。
+        //current是退出的，那么另一个就是剩下的。
+        //我们的序号是从0编号的，输出时要加一
         cout << pre+1 << endl;
         break;
         }

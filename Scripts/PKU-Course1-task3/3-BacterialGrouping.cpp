@@ -1,33 +1,33 @@
 /*
-¡¾Ï¸¾úÊµÑé·Ö×é¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÓÐÒ»ÖÖÏ¸¾ú·ÖÎªA¡¢BÁ½¸öÑÇÖÖ£¬ËüÃÇµÄÍâÔÚÌØÕ÷¼¸ºõÍêÈ«ÏàÍ¬£¬
-      ½ö½öÔÚ·±Ö³ÄÜÁ¦ÉÏÓÐÏÔÖø²î±ð£¬AÑÇÖÖ·±Ö³ÄÜÁ¦·Ç³£Ç¿£¬BÑÇÖÖµÄ·±Ö³ÄÜÁ¦ºÜÈõ¡£
-      ÔÚÒ»´ÎÎªÊ±Ò»¸öÐ¡Ê±µÄÏ¸¾ú·±Ö³ÊµÑéÖÐ£¬ÊµÑéÔ±ÓÉÓÚÊèºö°ÑÏ¸¾úÅàÑøÃó¸ãÂÒÁË£¬
-      ÇëÄã±àÐ´Ò»¸ö³ÌÐò£¬¸ù¾ÝÊµÑé½á¹û£¬°ÑÁ½¸öÑÇÖÖµÄÅàÑøÃóÖØÐÂ·Ö³ÉÁ½×é¡£
-      Ï¸¾ú·±Ö³ÄÜÁ¦£¨·±Ö³ÂÊ£©µÄÁ¿»¯±ê×¼ÎªÒ»¸öÐ¡Ê±ÄÚÏ¸¾úÊýÁ¿Ôö³¤µÄ±ÈÀý£¨·±Ö³ÂÊ = Ò»Ð¡Ê±ºóÏ¸¾úÊýÁ¿ / Ô­±¾Ï¸¾úÊýÁ¿£©¡£
-      Á½¸öÑÇÖÖ·±Ö³ÄÜÁ¦²îÒìºÜ´ó£¬
-      ÕâÒâÎ¶×Å¶ÔÓÚÈÎÒâÁ½¸öÍ¬ÖÖÏ¸¾úÅàÑøÃóµÄ·±Ö³ÂÊµÄ²âÁ¿ÖµÖ®¼äµÄ²îÒìÒªÐ¡ÓÚÈÎÒâÁ½¸öÒìÖÖÏ¸¾úÅàÑøÃó·±Ö³ÂÊµÄ²âÁ¿ÖµÖ®¼äµÄ²îÒì¡£
-ÊäÈë£ºÊäÈëÓÐ¶àÐÐ£¬µÚÒ»ÐÐÎªÕûÊýn£¨n¡Ü100£©£¬±íÊ¾ÓÐn¸öÅàÑøÃó¡£
-      ÆäÓànÐÐ£¬Ã¿ÐÐÓÐÈý¸öÕûÊý£¬·Ö±ð´ú±íÅàÑøÃó±àºÅ£¬ÊÔÑéÇ°Ï¸¾úÊýÁ¿£¬ÊÔÑéºóÏ¸¾úÊýÁ¿¡£¼ÙÉèÊÔÑéÃ»ÓÐÎó²î¡£
-Êä³ö£ºÊä³öÓÐ¶àÐÐ£º
-      µÚÒ»ÐÐÊä³öAÑÇÖÖÅàÑøÃóµÄÊýÁ¿£¬ÆäºóÃ¿ÐÐÊä³öAÑÇÖÖÅàÑøÃóµÄ±àºÅ£¬°´·±Ö³ÂÊÉýÐòÅÅÁÐ¡£
-      È»ºóÒ»ÐÐÊä³öBÑÇÖÖÅàÑøÃóµÄÊýÁ¿£¬ÆäºóÃ¿ÐÐÊä³öBÑÇÖÖÅàÑøÃóµÄ±àºÅ£¬Ò²°´·±Ö³ÂÊÉýÐòÅÅÁÐ¡£
-ÌáÊ¾£ºÑÇÖÖÄÚ²¿£¬Ï¸¾ú·±Ö³ÄÜÁ¦²îÒìÔ¶Ô¶Ð¡ÓÚÑÇÖÖÖ®¼äÏ¸¾ú·±Ö³ÄÜÁ¦µÄ²îÒì¡£
-      Ò²¾ÍÊÇËµ£¬ÑÇÖÖ¼äÈÎºÎÁ½×éÏ¸¾úµÄ·±Ö³ÂÊÖ®²î¶¼±ÈÑÇÖÖÄÚ²¿Á½×éÏ¸¾úµÄ·±Ö³ÂÊÖ®²î´ó¡£
+ã€ç»†èŒå®žéªŒåˆ†ç»„ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šæœ‰ä¸€ç§ç»†èŒåˆ†ä¸ºAã€Bä¸¤ä¸ªäºšç§ï¼Œå®ƒä»¬çš„å¤–åœ¨ç‰¹å¾å‡ ä¹Žå®Œå…¨ç›¸åŒï¼Œ
+      ä»…ä»…åœ¨ç¹æ®–èƒ½åŠ›ä¸Šæœ‰æ˜¾è‘—å·®åˆ«ï¼ŒAäºšç§ç¹æ®–èƒ½åŠ›éžå¸¸å¼ºï¼ŒBäºšç§çš„ç¹æ®–èƒ½åŠ›å¾ˆå¼±ã€‚
+      åœ¨ä¸€æ¬¡ä¸ºæ—¶ä¸€ä¸ªå°æ—¶çš„ç»†èŒç¹æ®–å®žéªŒä¸­ï¼Œå®žéªŒå‘˜ç”±äºŽç–å¿½æŠŠç»†èŒåŸ¹å…»çš¿æžä¹±äº†ï¼Œ
+      è¯·ä½ ç¼–å†™ä¸€ä¸ªç¨‹åºï¼Œæ ¹æ®å®žéªŒç»“æžœï¼ŒæŠŠä¸¤ä¸ªäºšç§çš„åŸ¹å…»çš¿é‡æ–°åˆ†æˆä¸¤ç»„ã€‚
+      ç»†èŒç¹æ®–èƒ½åŠ›ï¼ˆç¹æ®–çŽ‡ï¼‰çš„é‡åŒ–æ ‡å‡†ä¸ºä¸€ä¸ªå°æ—¶å†…ç»†èŒæ•°é‡å¢žé•¿çš„æ¯”ä¾‹ï¼ˆç¹æ®–çŽ‡ = ä¸€å°æ—¶åŽç»†èŒæ•°é‡ / åŽŸæœ¬ç»†èŒæ•°é‡ï¼‰ã€‚
+      ä¸¤ä¸ªäºšç§ç¹æ®–èƒ½åŠ›å·®å¼‚å¾ˆå¤§ï¼Œ
+      è¿™æ„å‘³ç€å¯¹äºŽä»»æ„ä¸¤ä¸ªåŒç§ç»†èŒåŸ¹å…»çš¿çš„ç¹æ®–çŽ‡çš„æµ‹é‡å€¼ä¹‹é—´çš„å·®å¼‚è¦å°äºŽä»»æ„ä¸¤ä¸ªå¼‚ç§ç»†èŒåŸ¹å…»çš¿ç¹æ®–çŽ‡çš„æµ‹é‡å€¼ä¹‹é—´çš„å·®å¼‚ã€‚
+è¾“å…¥ï¼šè¾“å…¥æœ‰å¤šè¡Œï¼Œç¬¬ä¸€è¡Œä¸ºæ•´æ•°nï¼ˆnâ‰¤100ï¼‰ï¼Œè¡¨ç¤ºæœ‰nä¸ªåŸ¹å…»çš¿ã€‚
+      å…¶ä½™nè¡Œï¼Œæ¯è¡Œæœ‰ä¸‰ä¸ªæ•´æ•°ï¼Œåˆ†åˆ«ä»£è¡¨åŸ¹å…»çš¿ç¼–å·ï¼Œè¯•éªŒå‰ç»†èŒæ•°é‡ï¼Œè¯•éªŒåŽç»†èŒæ•°é‡ã€‚å‡è®¾è¯•éªŒæ²¡æœ‰è¯¯å·®ã€‚
+è¾“å‡ºï¼šè¾“å‡ºæœ‰å¤šè¡Œï¼š
+      ç¬¬ä¸€è¡Œè¾“å‡ºAäºšç§åŸ¹å…»çš¿çš„æ•°é‡ï¼Œå…¶åŽæ¯è¡Œè¾“å‡ºAäºšç§åŸ¹å…»çš¿çš„ç¼–å·ï¼ŒæŒ‰ç¹æ®–çŽ‡å‡åºæŽ’åˆ—ã€‚
+      ç„¶åŽä¸€è¡Œè¾“å‡ºBäºšç§åŸ¹å…»çš¿çš„æ•°é‡ï¼Œå…¶åŽæ¯è¡Œè¾“å‡ºBäºšç§åŸ¹å…»çš¿çš„ç¼–å·ï¼Œä¹ŸæŒ‰ç¹æ®–çŽ‡å‡åºæŽ’åˆ—ã€‚
+æç¤ºï¼šäºšç§å†…éƒ¨ï¼Œç»†èŒç¹æ®–èƒ½åŠ›å·®å¼‚è¿œè¿œå°äºŽäºšç§ä¹‹é—´ç»†èŒç¹æ®–èƒ½åŠ›çš„å·®å¼‚ã€‚
+      ä¹Ÿå°±æ˜¯è¯´ï¼Œäºšç§é—´ä»»ä½•ä¸¤ç»„ç»†èŒçš„ç¹æ®–çŽ‡ä¹‹å·®éƒ½æ¯”äºšç§å†…éƒ¨ä¸¤ç»„ç»†èŒçš„ç¹æ®–çŽ‡ä¹‹å·®å¤§ã€‚
 */
 
 #include <iostream>
 
 using namespace std;
 //BacterialGrouping
-int BacterialGrouping()
+int main()
 {
-    int n; // nÎªÏ¸¾úµÄÊýÁ¿
-    int id[100]; // id¼ÇÂ¼Ï¸¾úµÄ±àºÅ
-    double rate[100]; // rate¼ÇÂ¼Ï¸¾úµÄ·±Ö³ÂÊ
-    // µÚi¸öÏ¸¾ú¶ÔÓ¦id[i]ºÍrate[i]
+    int n; // nä¸ºç»†èŒçš„æ•°é‡
+    int id[100]; // idè®°å½•ç»†èŒçš„ç¼–å·
+    double rate[100]; // rateè®°å½•ç»†èŒçš„ç¹æ®–çŽ‡
+    // ç¬¬iä¸ªç»†èŒå¯¹åº”id[i]å’Œrate[i]
 
     cin >> n;
     for (int i = 0; i < n; i++) {
@@ -36,7 +36,7 @@ int BacterialGrouping()
         rate[i] = (double)final / initial;
     }
 
-    // ¶ÔÕû¸öÏ¸¾úÅÅÐò£¨Ã°ÅÝÅÅÐò£©
+    // å¯¹æ•´ä¸ªç»†èŒæŽ’åºï¼ˆå†’æ³¡æŽ’åºï¼‰
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (rate[j + 1] > rate[j]) {
@@ -50,8 +50,8 @@ int BacterialGrouping()
         }
     }
 
-    double maxDiff = 0; // ¼ÇÂ¼×î´óµÄ²î
-    int maxDiffIndex = 0; // ºÍ×î´ó²îµÄÏÂ±ê
+    double maxDiff = 0; // è®°å½•æœ€å¤§çš„å·®
+    int maxDiffIndex = 0; // å’Œæœ€å¤§å·®çš„ä¸‹æ ‡
     for (int i = 0; i < n - 1; i++) {
         double diff = rate[i] - rate[i + 1];
         if (maxDiff < diff) {
@@ -60,12 +60,12 @@ int BacterialGrouping()
         }
     }
 
-    //Êä³ö·±Ö³ÂÊ½Ï´óµÄÄÇ×éÏ¸¾ú
+    //è¾“å‡ºç¹æ®–çŽ‡è¾ƒå¤§çš„é‚£ç»„ç»†èŒ
     cout << maxDiffIndex + 1 << endl;
     for (int i = maxDiffIndex; i >= 0; i--) {
         cout << id[i] << endl;
     }
-    //Êä³ö·±Ö³ÂÊ½ÏÐ¡µÄÄÇ×éÏ¸¾ú
+    //è¾“å‡ºç¹æ®–çŽ‡è¾ƒå°çš„é‚£ç»„ç»†èŒ
     cout << n - maxDiffIndex - 1 << endl;
     for (int i = n - 1; i >= maxDiffIndex + 1; i--) {
         cout << id[i] << endl;

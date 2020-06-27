@@ -1,34 +1,35 @@
 /*
-������������
-��Դ: POJ
-ע�⣺��ʱ������: 1000ms �ڴ�����: 65536kB
-������4��ר�Ҷ�4��������������
-      1��A˵��2����������õģ�
-      2��B˵��4����������õģ�
-      3��C˵��3������������õģ�
-      4��D˵�� B˵���ˡ�
-      ��ʵ��ֻ��1��������ѣ���ֻ��1��ר��˵���ˣ�����3�˶�˵���ˡ�
-���룺������
-�����������С���һ�������ѳ��ĳ��ţ�1-4�е�ĳ�����֣����ڶ������˵�Ե�ר�ң�A-D�е�ĳ����ĸ��
+【点评赛车】
+来源: POJ
+注意：总时间限制: 1000ms 内存限制: 65536kB
+描述：4名专家对4款赛车进行评论
+      1）A说：2号赛车是最好的；
+      2）B说：4号赛车是最好的；
+      3）C说：3号赛车不是最好的；
+      4）D说： B说错了。
+      事实上只有1款赛车最佳，且只有1名专家说对了，其他3人都说错了。
+输入：无输入
+输出：输出两行。第一行输出最佳车的车号（1-4中的某个数字）。第二行输出说对的专家（A-D中的某个字母）
 */
 
 #include<iostream>
 using namespace std;
-int CommentCar(){
-    // ��bestö����õĳ�
+int main()
+{
+    // 用best枚举最好的车
     int best;
     for(best = 1; best <= 4; best++){
-        // a b c d��¼��λר�ҵĻ�
+        // a b c d记录四位专家的话
         bool a = (best == 2);
         bool b = (best == 4);
         bool c = !(best == 3);
         bool d = !b;
         if (a + b + c + d != 1)
-            continue; // ������ֻ��1λר��˵�Ե�����
+            continue; // 不符合只有1位专家说对的条件
 
-        // �����ѵĳ�
+        // 输出最佳的车
         cout << best << endl;
-        // ����ж���ȷ��ר��
+        // 输出判断正确的专家
         if ( a == 1)
             cout << "A" << endl;
         else if ( b == 1)

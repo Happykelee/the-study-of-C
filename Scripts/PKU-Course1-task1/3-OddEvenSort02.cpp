@@ -1,24 +1,24 @@
 /*
-¡¾ÆæÅ¼ÅÅÐò01¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£ºÇëÊäÈëÊ®¸öÕûÊý£¬½«Ê®¸öÕûÊý°´ÉýÐòÅÅÁÐÊä³ö£¬²¢ÇÒÆæÊýÔÚÇ°£¬Å¼ÊýÔÚºó¡£
-ÊäÈë£ºÊäÈëÊ®¸öÕûÊý¡£
-Êä³ö£º°´ÕÕÆæÅ¼ÅÅÐòºÃµÄÊ®¸öÕûÊý¡£
+ã€å¥‡å¶æŽ’åº01ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šè¯·è¾“å…¥åä¸ªæ•´æ•°ï¼Œå°†åä¸ªæ•´æ•°æŒ‰å‡åºæŽ’åˆ—è¾“å‡ºï¼Œå¹¶ä¸”å¥‡æ•°åœ¨å‰ï¼Œå¶æ•°åœ¨åŽã€‚
+è¾“å…¥ï¼šè¾“å…¥åä¸ªæ•´æ•°ã€‚
+è¾“å‡ºï¼šæŒ‰ç…§å¥‡å¶æŽ’åºå¥½çš„åä¸ªæ•´æ•°ã€‚
 */
 #include <iostream>
 using namespace std;
 
-int OddEvenSort02() {
+int main(){
     int a[10];
     for (int i = 0; i < 10; i++) {
         cin >> a[i];
     }
-    // Ã°ÅÝÅÅÐò
+    // å†’æ³¡æŽ’åº
     for (int i = 0; i < 9; i++) {
         for (int j = 1; j < 10 - i; j++) {
-        // Óë¸Õ²ÅµÄÃ°ÅÝÅÅÐò²»Í¬£¬ÎÒÃÇ²»Ö»ÊÇÍ¨¹ý½ÏÊý×ÖµÄ´óÐ¡¾ö¶¨Ë³Ðò
-        // Èç¹û×ó±ßµÄÎªÅ¼Êý£¬ÓÒ±ßµÄÎªÆæÊý£¬ÄÇÃ´Ë³ÐòÒ²ÐèÒªµßµ¹
+            // ä¸Žåˆšæ‰çš„å†’æ³¡æŽ’åºä¸åŒï¼Œæˆ‘ä»¬ä¸åªæ˜¯é€šè¿‡è¾ƒæ•°å­—çš„å¤§å°å†³å®šé¡ºåº
+            // å¦‚æžœå·¦è¾¹çš„ä¸ºå¶æ•°ï¼Œå³è¾¹çš„ä¸ºå¥‡æ•°ï¼Œé‚£ä¹ˆé¡ºåºä¹Ÿéœ€è¦é¢ å€’
             bool leftIsEven = a[j - 1] % 2 == 0;
             bool rightIsEven = a[j] % 2 == 0;
             if ((leftIsEven && !rightIsEven) || (leftIsEven == rightIsEven && a[j - 1] > a[j])) {

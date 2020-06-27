@@ -1,11 +1,11 @@
 /*
-¡¾×îÔ¶¾àÀë¡¿
-À´Ô´: POJ
-×¢Òâ£º×ÜÊ±¼äÏÞÖÆ: 1000ms ÄÚ´æÏÞÖÆ: 65536kB
-ÃèÊö£º¸ø¶¨Ò»×éµã(x,y)£¬Çó¾àÀë×îÔ¶µÄÁ½¸öµãÖ®¼äµÄ¾àÀë¡£
-ÊäÈë£ºµÚÒ»ÐÐÊÇµãÊýn£¨n´óÓÚµÈÓÚ2£©
-      ½Ó×ÅÃ¿Ò»ÐÐ´ú±íÒ»¸öµã£¬ÓÉÁ½¸ö¸¡µãÊýx y×é³É¡£
-Êä³ö£ºÊä³öÒ»ÐÐÊÇ×îÔ¶Á½µãÖ®¼äµÄ¾àÀë¡£
+ã€æœ€è¿œè·ç¦»ã€‘
+æ¥æº: POJ
+æ³¨æ„ï¼šæ€»æ—¶é—´é™åˆ¶: 1000ms å†…å­˜é™åˆ¶: 65536kB
+æè¿°ï¼šç»™å®šä¸€ç»„ç‚¹(x,y)ï¼Œæ±‚è·ç¦»æœ€è¿œçš„ä¸¤ä¸ªç‚¹ä¹‹é—´çš„è·ç¦»ã€‚
+è¾“å…¥ï¼šç¬¬ä¸€è¡Œæ˜¯ç‚¹æ•°nï¼ˆnå¤§äºŽç­‰äºŽ2ï¼‰
+      æŽ¥ç€æ¯ä¸€è¡Œä»£è¡¨ä¸€ä¸ªç‚¹ï¼Œç”±ä¸¤ä¸ªæµ®ç‚¹æ•°x yç»„æˆã€‚
+è¾“å‡ºï¼šè¾“å‡ºä¸€è¡Œæ˜¯æœ€è¿œä¸¤ç‚¹ä¹‹é—´çš„è·ç¦»ã€‚
 */
 
 #include<iostream>
@@ -13,7 +13,7 @@
 #include<cmath>
 using namespace std;
 
-int FarthestDistance(){
+int main(){
     int n;
     double *x, *y, dis=0.0;
     cin>>n;
