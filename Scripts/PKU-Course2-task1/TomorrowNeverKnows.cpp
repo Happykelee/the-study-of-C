@@ -1,15 +1,15 @@
 /*
-��Tomorrow Never Knows��
-��Դ: POJ
-ע�⣺��ʱ������: 1000ms �ڴ�����: 65536kB
-�������׿ǳ�ġ�A day in the life���͡�Tomorrow never knows�������˿ڣ�
-      ���������a day in the life����Ļ���tomorrow never knows��
-      ����ѧ�˼Ƹ�֮���ⲻ�������⣬���ھ���ʵ�ְɡ�
+【Tomorrow Never Knows】
+来源: POJ
+注意：总时间限制: 1000ms 内存限制: 65536kB
+描述：甲壳虫的《A day in the life》和《Tomorrow never knows》脍炙人口，
+      如果告诉你a day in the life，真的会是tomorrow never knows？
+      相信学了计概之后这不会是难题，现在就来实现吧。
 
-      ����һ����ʽΪyyyy-mm-dd�����ڣ�����-��-�գ���������������һ������ڡ�
-      ���Լٶ���������ڲ�����1600-01-01��Ҳ������2999-12-30.
-���룺�����һ�У���ʽΪyyyy-mm-dd�����ڡ�
-��������Ҳ��һ�У���ʽΪyyyy-mm-dd�����ڡ�
+      读入一个格式为yyyy-mm-dd的日期（即年-月-日），输出这个日期下一天的日期。
+      可以假定输入的日期不早于1600-01-01，也不晚于2999-12-30.
+输入：输入仅一行，格式为yyyy-mm-dd的日期。
+输出：输出也仅一行，格式为yyyy-mm-dd的日期。
 */
 #include <iostream>
 #include<cmath>
@@ -48,11 +48,12 @@ void CoutTomorrow(int date[]){
   cout<<date[2]<<endl;
 }
 
-void TomorrowNeverKnows(){
+int main(){
     char str[20];
     while(cin.getline(str,20)){
         int date[3]={0,0,0};
         getdate(str, date);
         CoutTomorrow(date);
     }
+    return 0;
 }

@@ -520,7 +520,7 @@ double notation(){
     case '-': return notation() - notation();
     case '*': return notation() * notation();
     case '/': return notation() / notation();
-    default: return atof(str);
+    default: return atof(str); //把一个字符串转换成相应的 float类型
   }
 }
 int main(){

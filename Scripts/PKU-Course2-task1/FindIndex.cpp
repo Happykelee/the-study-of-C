@@ -11,7 +11,7 @@
 */
 #include <iostream>
 using namespace std;
-void FindIndex(){
+int main(){
     int n;
     cin>>n;
     int *a = new int[n];
@@ -24,4 +24,5 @@ void FindIndex(){
         else if(i==n-1)
             cout<<"N"<<endl;
     }
+    return 0;
 }
