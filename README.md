@@ -13,7 +13,8 @@
 * [分支结构](#分支结构)
 * [循环结构](#循环结构)
 * [数组&字符串](Array&String.md)
-* [函数](Function.md)
+* [函数&递归](Function&Recursion.md)
+* [指针](Pointer.md)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
