@@ -10,3 +10,7 @@
 4. [PKU-Course1-task3](PKU-Course1-task3)
 5. [PKU-Course1-task4](PKU-Course1-task4)
 6. [PKU-Course1-task5](PKU-Course1-task5)
+7. [PKU-Course1-task6](PKU-Course1-task6)
+8. [PKU-Course1-task7](PKU-Course1-task7)
+9. [PKU-Course2-task1](PKU-Course2-task1)
+10. [PKU-Course2-task2](PKU-Course2-task1)
