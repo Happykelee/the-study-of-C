@@ -21,6 +21,12 @@
 
 ### 变量类型
 
+* **变量三要素**
+
+  * 变量的地址
+  * 变量的值
+  * 变量的名字
+
 ![1-data-structure](./images/1-data-structure.jpeg)
 
 * 整型
@@ -71,6 +77,8 @@ int main(int argc, char *argv[])
 
   * 字面常量
   * 符号常量：由const关键字修饰
+    * 表示方式一： const 数据类型 常量名=常量值
+    * 表示方式二： 数据类型 const 常量名=常量值
   * 说明：常量类型由后缀定义，如果没有后缀则默认位整型和double双精度浮点数
 
 ```C
@@ -100,8 +108,9 @@ const int NUMBER_OF_DOGS = 7;
   }
   ```
 
-* **scanf**: 提取用户输入的值，并将其储存到变量里面。  
-Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样. 在scanf中，float是%f，而double是%lf.
+* **scanf**: 提取用户输入的值，并将其储存到变量里面。
+
+  Note: 对于float和double来说，printf里面他们的替代符号都是%f， 但是在scanf里面却不一样. 在scanf中，float是%f，而double是%lf.
 
   ```C
   int main(int argc, char *argv[])
@@ -115,9 +124,13 @@ Note: 对于float和double来说，printf里面他们的替代符号都是%f， 
       return 0;
   }
   ```
+
 * **C++： cin/cout**
+
   * **输入缓冲区**:键盘输出---->输入缓冲区---->程序从输入缓冲区读取输入，指针标定数据的读取位置，只能往后移动。
+
   * 另，字符和字符串的输入输出详情见[Array&String.md](Array&String.md)的“**字符/字符数组/字符串的输入与输出**”部分。
+  
   ```C++
   #include <iostream>
   #include <iomanip>
@@ -173,7 +186,7 @@ Note: 对于float和double来说，printf里面他们的替代符号都是%f， 
 ## [运算](#目录)
 
 ### 运算优先级
-* 逻辑非>算数运算符>关系运算符>逻辑与和或>赋值运算符>逗号运算符
+* 后置++-- > 前置++--/逻辑非/**指针运算符** > 算数运算符 > 关系运算符 > 逻辑与和或 > 赋值运算符 > 逗号运算符
 
 ### 赋值运算
 
@@ -201,29 +214,29 @@ Note: 对于float和double来说，printf里面他们的替代符号都是%f， 
   | 取模 | % |
 
 * **自增自减运算**
-  * ++i/--i: 在使用i之前，先讲i的值加（减）1
-  * i++/i--: 在使用i之后，先讲i的值加（减）1
+  * ++i/--i: **在使用i之前**，先将i的值加（减）1
+  * i++/i--: **在使用i之后**，再将i的值加（减）1
   * ++/--不能用于表达式：(i+j)++ 错！！！
   * 输出自增自减：输出语句有多个表达式，优先计算右边（VC平台下）
 
-```C++
-int i=3,j;
-j = ++i; //i=4,j=4
-j = i++; //i=5,j=4
-cout << ++i;
-cout << i++;
+  ```C++
+  int i=3,j;
+  j = ++i; //i=4,j=4
+  j = i++; //i=5,j=4
+  cout << ++i;
+  cout << i++;
 
-int number = 2;
-number++; //自增运算: 结果+1操作
-number--; //自减运算
+  int number = 2;
+  number++; //自增运算: 结果+1操作
+  number--; //自减运算
 
-// 复合赋值运算
-number += 4; // number变为6
-number -= 3; // number变为3
-number *= 5; // number变为15
-number /= 3; // number变为5
-number %= 3; // number变为2 （因为 5 = 1 * 3 + 2）
-```
+  // 复合赋值运算
+  number += 4; // number变为6
+  number -= 3; // number变为3
+  number *= 5; // number变为15
+  number /= 3; // number变为5
+  number %= 3; // number变为2 （因为 5 = 1 * 3 + 2）
+  ```
 
 ### 关系运算
 

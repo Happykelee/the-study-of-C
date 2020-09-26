@@ -366,13 +366,15 @@ int main(){
 
 ### 递归的作用
 
-**用递归来完成递推**
+* **用递归来完成递推**
+  
   * 不同：递推的关注点放在起始点条件，而递归的关注点放在求解目标上；
   * 相同：重在表现第i次与第i+1次的关系。
   * 方法
     * 把关注点放在要求解的目标上；
     * 找到第n次做与第n-1次做之间的关系；
     * 确定第1次的返回结果。
+
   ```C++
   /*切饼
   q(n) = q(n-1)+n;
@@ -412,92 +414,92 @@ int main(){
   }
   ```
 
-**模拟连续发生的动作**
+* **模拟连续发生的动作**
 
   * 方法
     * 搞清楚连续发生的动作是什么；
     * 搞清楚不同次动作之间的关系；
     * 搞清楚边界条件是什么。
 
-```C++
-//将123转换成等值的二进制数
-void convert(int x)
-{
-  if((x/2)!=0)
+  ```C++
+  //将123转换成等值的二进制数
+  void convert(int x)
   {
-    convert(x/2);
-    cout << x%2; //逆序打印
+    if((x/2)!=0)
+    {
+      convert(x/2);
+      cout << x%2; //逆序打印
+    }
+    else
+      cout<<x;
   }
-  else
-    cout<<x;
-}
-int main()
-{
-  int x;
-  cin>>x;
-  convert(x);
-  return 0;
-}
-```
-```C++
-/*汉诺塔问题
-要实现: move(n,A,B,C)
-需进行(简化成两次移动n-1个盘子)：
-        move(n-1,A,C,B)
-        move n from A to C
-        move(n-1,B,A,C)
-*/
-void move(int m,char x,char y,char z)
-//将m个盘子从A经过B移动到C
-{
-  if(m==1)
-    cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
-  else
+  int main()
   {
-    move(m-1,x,z,y);
-    cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
-    move(m-1,y,x,z);
+    int x;
+    cin>>x;
+    convert(x);
+    return 0;
   }
-}
-int main(){
-  int n;
-  cout<<"请输入盘数n=";
-  cin>>n;
-  cout<<"在3根柱子上移"<<n<<"只盘的步骤为："<<endl;
-  move(n,'A','B','C');
-  return 0;
-}
-```
-```C++
-/*
-【放苹果】
-把M个同样的苹果放到N个同样的盘子里，允许有的盘子不放，问共有多少种不同的分法？（和顺序无关）
-【分析】
-1、如果：盘子数＞苹果数
-  if(n>m) f(m,n)=f(m,m)
-2、如果：苹果数＞=盘子数
-  下面两种情况下放置方式的和
-  ① 有盘子空着: f(m,n)=f(m,n-1)
-  ② 没盘子空着: f(m,n)=f(m-n,n)
-*/
-int count(int m, int n){
-  if(m==0||n==1) return 1;
-  //递归出口：当只有0个苹果或者只有1个盘子
-  //也可以写成(m<=1||n<=1)
-  if(m<n)
-    return count(m,m);
-  else
-    return count(m,n-1)+count(m-n,n);
-}
-int main(){
-  int apples, plates;
-  cin>>apples>>plates;
-  cout<<count(apples,plates);
-  return 0;
-}
-```
+  ```
+  ```C++
+  /*汉诺塔问题
+  要实现: move(n,A,B,C)
+  需进行(简化成两次移动n-1个盘子)：
+          move(n-1,A,C,B)
+          move n from A to C
+          move(n-1,B,A,C)
+  */
+  void move(int m,char x,char y,char z)
+  //将m个盘子从A经过B移动到C
+  {
+    if(m==1)
+      cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
+    else
+    {
+      move(m-1,x,z,y);
+      cout<<"把一个盘子从"<<x<<"移动到"<<z<<endl;
+      move(m-1,y,x,z);
+    }
+  }
+  int main(){
+    int n;
+    cout<<"请输入盘数n=";
+    cin>>n;
+    cout<<"在3根柱子上移"<<n<<"只盘的步骤为："<<endl;
+    move(n,'A','B','C');
+    return 0;
+  }
+  ```
+  ```C++
+  /*
+  【放苹果】
+  把M个同样的苹果放到N个同样的盘子里，允许有的盘子不放，问共有多少种不同的分法？（和顺序无关）
+  【分析】
+  1、如果：盘子数＞苹果数
+    if(n>m) f(m,n)=f(m,m)
+  2、如果：苹果数＞=盘子数
+    下面两种情况下放置方式的和
+    ① 有盘子空着: f(m,n)=f(m,n-1)
+    ② 没盘子空着: f(m,n)=f(m-n,n)
+  */
+  int count(int m, int n){
+    if(m==0||n==1) return 1;
+    //递归出口：当只有0个苹果或者只有1个盘子
+    //也可以写成(m<=1||n<=1)
+    if(m<n)
+      return count(m,m);
+    else
+      return count(m,n-1)+count(m-n,n);
+  }
+  int main(){
+    int apples, plates;
+    cin>>apples>>plates;
+    cout<<count(apples,plates);
+    return 0;
+  }
+  ```
 
-**进行“自动的分析”**
+* **进行“自动的分析”**
 
 ```C++
 /*
@@ -528,3 +530,55 @@ int main(){
   return 0;
 }
 ```
+
+* **递归搜索：八皇后**
+
+  * 题目简述：在八乘八棋盘中放八个皇后，然后互相不被攻击到，共有多少种可能性。
+  * 搜索问题：
+    * 开始：是否达到最简单情况
+    * 第一步：枚举可能的动作，对于每一个可行的动作；
+    * 第二步：尝试这个动作
+    * 第三步：递归计算（搜索）更简单的情况
+    * 第四步：撤销这个动作
+    * 最后：返回值
+  * 解析过程：
+    * int F(n)解决n到7排布皇后的问题，返回可能的数量。
+    * F(0) = (在0,0放皇后)F(1) + (在0,1放皇后)F(1) + …… + (在0,7放皇后)F(1)
+    * F(1) = (在1,2放皇后)F(2) + (在1,3放皇后)F(2) + …… + (在1,7放皇后)F(2)
+    * F(7) = (在7,7放皇后)F(8) 
+    * F(8) = 1 (表明本轮成功完成)
+  
+* **递归搜索优化：棋盘跳马**
+
+  * 题目简述：在布满障碍的棋盘上，马从指定起点跳到指定终点，所需要的最小步数。
+  * 搜索问题：
+    * 开始：判断是否算过当前状态，如果算过直接返回（保留记忆），判断当前是否达到最简单情况
+    * 第一步：枚举可能的动作
+    * 第二步：尝试这个动作
+    * 第三步：递归计算（搜索）更简单的情况
+    * 第四步：撤销这个动作
+    * 最后：记录这次运算的结果，返回值
+  * 解析过程：
+    * F(Xs,Ys) = min(在S点的所有可能动作，比如跳到Z F(Xz,Yz))
+    * 解决往回跳的情况：记录历史步骤；有记忆的搜索优化搜索
+    * 伪代码：
+      ```
+      List triedPositions;
+      History[100][100] = {-1};
+      if (History[x][y]!=-1)
+        Return History[x][y]
+      if(x,y==Xe,Ye)
+        Return 0;
+      int F(x,y){
+        List = getLegalMoves(x,y);
+        For each move in list{
+          做动作(move)
+          Add move to triedPositions
+          R = min(R,1+F(move之后的坐标))
+          撤销动作(move)
+          Remove move from triedPositions
+        }
+      History[x][y] = R;
+      Return R;
+      }
+      ```
