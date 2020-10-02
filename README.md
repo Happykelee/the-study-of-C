@@ -8,13 +8,15 @@
 
 ## 目录
 
-* [变量](#变量)
-* [运算](#运算)
-* [分支结构](#分支结构)
-* [循环结构](#循环结构)
-* [数组&字符串](Array&String.md)
-* [函数&递归](Function&Recursion.md)
-* [指针](Pointer.md)
+* **基础部分**
+  * [变量](#变量)
+  * [运算](#运算)
+  * [分支结构](#分支结构)
+  * [循环结构](#循环结构)
+  * [数组&字符串](Basic/Array&String.md)
+  * [函数&递归](Basic/Function&Recursion.md)
+  * [指针](Basic/Pointer.md)
+  * [结构体及链表](Basic/Struct&List.md)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
@@ -372,7 +374,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-## [循环结构](目录)
+## [循环结构](#目录)
 
 ### while循环
 
