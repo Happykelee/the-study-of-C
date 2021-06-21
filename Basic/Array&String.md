@@ -226,7 +226,7 @@ char weekday[7][11] = {'Sunday','Monday','Tuesday','Wednesday','Thursday','Frida
 
   * 例题：输入一个英文句子（不超过80个单词），统计单词数，单词间用空格隔开。
   ```C++
-  \\ 单词开始前是一个空格
+  // 单词开始前是一个空格
   int num=0,flag=0;
   char str[80];
   cin.getline(str,80);

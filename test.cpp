@@ -1,70 +1,85 @@
 #include <iostream>
 using namespace std;
 
-struct Node
+struct student
 {
-    int num;
-    Node *next;
-    Node *ahead;
+    int id_num;
+    student *next;
 };
 
-Node *Create(int N);
-Node *Search(Node *head, int P);
-Node *Release(Node *head, int M);
+student *create()
+{
+    student *head, *temp;
+    int num, n = 0;
+    head = new student;
+    temp = head;
+    cin >> num;
+    while (num != -1)
+    {
+        n++;
+        temp->id_num = num;
+        temp->next = new student;
+        temp = temp->next;
+        cin >> num;
+    }
+    if (n == 0)
+        head = NULL;
+    else
+        temp->next = NULL;
+    return head;
+}
+
+student *dele(student *head, int n)
+{
+    student *temp, *follow;
+    temp = head;
+    if (head == NULL)
+    // head为空，空表的情况
+    {
+        cout << "NULL Struct" << endl;
+        return (head);
+    }
+
+    if (head->id_num == n)
+    // 第一个结点是要删除的目标
+    {
+        head = head->next;
+        delete temp;
+        return (head);
+    }
+
+    while (temp != NULL && temp->id_num != n)
+    {
+        follow = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL)
+        cout << "not found";
+    else
+    {
+        follow->next = temp->next;
+        delete temp;
+    }
+    return (head);
+}
 
 int main()
 {
-    int N,P,M; // N-起使结点数，P-开始结点数
-    cin >> N >> P >> M;
-    Node *head = Create(N); // 创建
-    head = Search(head,P); // 找到第P个结点
-    while(head->next!=head)
-    // 不断始放第M个元素，直至只剩一个元素
+    student *header = create();
+    student *pointer = header;
+    while (pointer->next != NULL)
     {
-        head = Release(head, M);
+        cout << pointer->id_num << endl;
+        pointer = pointer->next;
     }
-    cout << "*" << head->num <<endl;
+    student *temp;
+    temp = dele(header,23);
+    // pointer = header;
+    while (pointer->next != NULL)
+    {
+        cout << pointer->id_num << endl;
+        pointer = pointer->next;
+    }
+
     return 0;
-}
-
-Node *Create(int N)
-{
-    Node *head, *temp, *unit;
-    head = new Node;
-    head->num = 1;
-    temp = head;
-
-    for(int i=2;i<=N;i++)
-    {
-        unit = new Node;
-        unit->num = i;
-        unit->ahead = temp;
-        temp->next = unit;
-        temp = temp->next;
-    }
-    // 尾结点处理
-    unit->next = head;
-    head->ahead = unit;
-    return (head);
-    }
-
-Node *Search(Node *head, int P)
-{
-    P = P - 1;
-    for(int i=0;i<P;i++)
-        head = head->next;
-    return(head);
-}
-
-Node *Release(Node *head, int M)
-{
-    Node *temp = head;
-    for(int i=1;i<M;i++)
-        temp = temp->next; // 找到第M个位置指针
-    temp->ahead->next = temp->next;
-    temp->next->ahead = temp->ahead;
-    cout << temp->num << endl;
-    head = temp->next;
-    delete temp;
-    return(head);
 }

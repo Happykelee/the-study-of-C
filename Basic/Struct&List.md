@@ -30,13 +30,13 @@
     // (2) 在声明类型的同时定义变量
         struct student
     {
-    int id;
-    char name[20];
-    char sex;
-    int age;
-    float score;
-    char addr[30];
-    }lige_1, lige_2;
+        int id;
+        char name[20];
+        char sex;
+        int age;
+        float score;
+        char addr[30];
+    } lige_1, lige_2;
     ```
 
 ### 结构体使用
@@ -311,7 +311,7 @@
       }
       if(n==0)
         head = NULL;
-    else
+      else
         temp->next = NULL;
     return head;
   }
@@ -376,6 +376,7 @@
     ```
 
   * 中间结点
+
     ```C++
     follow->next = temp->next
     delete temp;
@@ -384,17 +385,18 @@
 
   ```C++
   // 在链表中将值为n的元素删掉
-  sudent *dele(student *head, int n)
+  student *dele(student *head, int n)
   {
       student *temp, *follow;
       temp = head;
-      if(head=NULL)
+      if(head==NULL)
       // head为空，空表的情况
       {
+        cout << "NULL Struct" << endl;
         return(head);
       }
 
-      if(head->num==n)
+      if(head->id_num==n)
       // 第一个结点是要删除的目标
       {
           head = head->next;
@@ -402,12 +404,12 @@
           return(head);
       }
 
-      while(temp!=NULL&&temp->num!=n)
+      while(temp!=NULL&&temp->id_num!=n)
       {
           follow = temp;
           temp = temp->next;
       }
-      if（temp==NULL)
+      if (temp==NULL)
         cout << "not found";
       else
       {
@@ -442,17 +444,17 @@
       student *temp, *follow, *uint;
       temp = head;
       unit = new student;
-      unit->num = n;
+      unit->id_num = n;
       unit->next = NULL;
 
-      if(head=NULL)
+      if(head==NULL)
       // head为空，直接插入
       {
           head = unit; 
           return(head);
       }
 
-      while((temp->next!=NULL)&&(temp->num<n))
+      while((temp->next!=NULL)&&(temp->id_num<n))
       // 寻找第一个不小于n或结尾的结点temp
       {
           follow = temp;

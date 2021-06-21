@@ -17,8 +17,8 @@
   * [函数&递归](Basic/Function&Recursion.md)
   * [指针](Basic/Pointer.md)
   * [结构体及链表](Basic/Struct&List.md)
-*  **面向对象编程(C++)**
-   *  
+* **面向对象编程(C++)**
+  * [From C to C++](./ObjectOriented/README.md)
 * [练习小脚本](Scripts)
 
 ## [变量](#目录)
